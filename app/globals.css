@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #004438;
+  --color-brand-green-dark: #00352c;
+  --color-brand-yellow: #fbbf24;
+  --color-hero-text: #1a2332;
+  --font-family-display: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply text-neutral-800;
+  }
+}
+
+/* Testimonial slider — center card content entrance */
+@keyframes testimonial-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes testimonial-side-shift {
+  from {
+    opacity: 0.35;
+    transform: translateX(var(--shift, 0)) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.testimonial-animate-center {
+  animation: testimonial-content-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-animate-center,
+  .testimonial-animate-side-left,
+  .testimonial-animate-side-right {
+    animation: none;
+  }
+}
+
+.testimonial-animate-side-left {
+  --shift: 10px;
+  animation: testimonial-side-shift 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.testimonial-animate-side-right {
+  --shift: -10px;
+  animation: testimonial-side-shift 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
