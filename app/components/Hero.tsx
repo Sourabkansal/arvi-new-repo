@@ -78,7 +78,7 @@ export function Hero() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:shrink-0 lg:justify-end">
                 <Link
-                  href="#quote"
+                  href="/contact"
                   className="rounded-full bg-[#004438] px-8 py-3.5 text-center text-sm font-bold tracking-wide text-white shadow-md shadow-[#004438]/25 transition hover:bg-[#00352c]"
                 >
                   REQUEST QUOTE

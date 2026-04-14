@@ -60,7 +60,7 @@ export default function CarriersPage() {
 
               <div className="mt-8 sm:mt-9">
                 <Link
-                  href="/#quote"
+                  href="/contact"
                   className="inline-flex rounded-full bg-[#004438] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition-colors duration-200 hover:bg-[#fbbf24] hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]/80"
                 >
                   Haul with us

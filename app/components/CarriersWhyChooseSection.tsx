@@ -1,74 +1,129 @@
 import carrierSideImage from "@/Images/carrier p image.jpg";
+import {
+  CheckCircle2,
+  CircleDollarSign,
+  Headset,
+  MapPinned,
+  TrendingUp,
+} from "lucide-react";
 import Image from "next/image";
 
-const ICON_1 =
-  "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/Carriers-Icon-Image-1.webp";
-const ICON_2 =
-  "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/Carriers-Icon-Image-2.webp";
-const ICON_3 =
-  "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/Carriers-Icon-Image-3.webp";
+const CARD_BG = "#F0F9F6";
+const CARD_BORDER = "#D1EAE2";
+const ICON_COLOR = "#0A4D3C";
 
 const CARDS: {
-  iconSrc: string;
-  iconAlt: string;
   title: string;
   body: string;
+  icon: "lanes" | "payouts" | "support";
 }[] = [
   {
-    iconSrc: ICON_1,
-    iconAlt: "Routing and lane coverage",
-    title: "Freight That Fits Your Lanes and Schedule",
+    icon: "lanes",
+    title: "Consistent Freight, Less Empty Miles",
     body: "With our nationwide shipper network, you'll find steady loads that fit your lanes, equipment, and schedule—helping you maximize earnings and minimize deadhead.",
   },
   {
-    iconSrc: ICON_2,
-    iconAlt: "Payments and settlements",
-    title: "Fast, Dependable Payment Processing",
-    body: "Our established brokerage and reputation for reliability mean you get paid on time—typically within 15–20 days. No chasing payments, no added stress.",
+    icon: "payouts",
+    title: "Fast Payouts You Can Count On",
+    body: "Our decade-old MC and reputation for reliability mean you get paid on time—typically within 15–20 days. No chasing payments, no added stress.",
   },
   {
-    iconSrc: ICON_3,
-    iconAlt: "Carrier support",
-    title: "Dedicated Support From Dispatch to Delivery",
+    icon: "support",
+    title: "Dedicated Support, Every Step",
     body: "From dispatch to delivery, our responsive carrier relations team is here to back you up. Whether you're hauling FTL, LTL, drayage, or flatbed—we keep your trucks loaded and your business moving.",
   },
 ];
 
+function CardIcon({ variant }: { variant: "lanes" | "payouts" | "support" }) {
+  const common = "shrink-0";
+  const stroke = 2;
+
+  if (variant === "lanes") {
+    return (
+      <MapPinned
+        className={common}
+        style={{ color: ICON_COLOR }}
+        strokeWidth={stroke}
+        size={48}
+        aria-hidden
+      />
+    );
+  }
+
+  if (variant === "payouts") {
+    return (
+      <span className="relative inline-flex shrink-0" aria-hidden>
+        <CircleDollarSign
+          className={common}
+          style={{ color: ICON_COLOR }}
+          strokeWidth={stroke}
+          size={48}
+        />
+        <TrendingUp
+          className="absolute -right-1 -top-1 drop-shadow-sm"
+          style={{ color: ICON_COLOR }}
+          strokeWidth={stroke}
+          size={22}
+        />
+      </span>
+    );
+  }
+
+  return (
+    <span
+      className="relative inline-flex size-[52px] shrink-0 items-center justify-center"
+      aria-hidden
+    >
+      <Headset
+        className={common}
+        style={{ color: ICON_COLOR }}
+        strokeWidth={stroke}
+        size={44}
+      />
+      <CheckCircle2
+        className="absolute -bottom-0.5 -right-0.5 drop-shadow-sm"
+        style={{ color: ICON_COLOR }}
+        strokeWidth={2}
+        size={22}
+        fill={CARD_BG}
+      />
+    </span>
+  );
+}
+
 export function CarriersWhyChooseSection() {
   return (
     <section
-      className="bg-white py-16 sm:py-20 lg:py-24"
+      className="bg-white py-12 sm:py-16 lg:py-20"
       aria-labelledby="carriers-why-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           id="carriers-why-heading"
-          className="text-center text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-[2.35rem] lg:leading-[1.15]"
+          className="max-w-4xl text-left text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
         >
           Why Carriers Choose ARVI Logistics
         </h2>
 
-        <div className="mt-10 grid items-start gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-10 xl:gap-14">
-          <ul className="flex list-none flex-col gap-4 p-0 sm:gap-5">
-            {CARDS.map(({ iconSrc, iconAlt, title, body }) => (
+        <div className="mt-8 grid items-stretch gap-8 sm:mt-10 sm:gap-10 lg:mt-11 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-14">
+          <ul className="flex list-none flex-col gap-4 p-0 sm:gap-[18px]">
+            {CARDS.map(({ icon, title, body }) => (
               <li
                 key={title}
-                className="flex gap-4 rounded-xl border border-neutral-200 bg-neutral-50/80 p-5 sm:gap-5 sm:p-6"
+                className="flex gap-4 rounded-[14px] border p-5 sm:gap-5 sm:p-[22px]"
+                style={{
+                  backgroundColor: CARD_BG,
+                  borderColor: CARD_BORDER,
+                }}
               >
-                <div className="flex size-[52px] shrink-0 items-center justify-center sm:size-14">
-                  <Image
-                    src={iconSrc}
-                    alt={iconAlt}
-                    width={56}
-                    height={56}
-                    className="size-[52px] object-contain sm:size-14"
-                  />
+                <div className="flex shrink-0 items-start pt-0.5 sm:items-center sm:pt-0">
+                  <CardIcon variant={icon} />
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600 sm:text-[15px] sm:leading-[1.65]">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-neutral-900 sm:text-[15px] sm:leading-[1.65]">
                     {body}
                   </p>
                 </div>
@@ -76,18 +131,17 @@ export function CarriersWhyChooseSection() {
             ))}
           </ul>
 
-          <div className="flex justify-center lg:justify-end lg:pt-1">
-            <div className="relative w-full max-w-[240px] overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-100 shadow-md ring-1 ring-black/[0.04] sm:max-w-[280px] lg:max-w-[300px]">
-              <div className="relative aspect-[3/4] w-full">
-                <Image
-                  src={carrierSideImage}
-                  alt="Shipping yard with stacked containers and trucks at dusk"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 280px, 300px"
-                />
-              </div>
-            </div>
+          <div
+            className="relative min-h-[260px] w-full overflow-hidden rounded-[14px] border shadow-sm sm:min-h-[300px] lg:min-h-full"
+            style={{ borderColor: CARD_BORDER }}
+          >
+            <Image
+              src={carrierSideImage}
+              alt="Container yard with stacked shipping containers and handling equipment"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+            />
           </div>
         </div>
       </div>

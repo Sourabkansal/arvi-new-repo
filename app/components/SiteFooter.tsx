@@ -150,10 +150,10 @@ export function SiteFooter() {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "#about" },
-                { label: "Careers", href: "#careers" },
+                { label: "Careers", href: "/careers" },
                 { label: "Tracking", href: "#tracking" },
                 { label: "Blog", href: "#blog" },
-                { label: "Contact Us", href: "#quote" },
+                { label: "Contact Us", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link

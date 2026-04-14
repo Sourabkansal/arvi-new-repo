@@ -30,23 +30,27 @@ type DropdownItem = {
 const navItems: { label: string; href: string; hasDropdown: boolean }[] = [
   { label: "SHIPPERS", href: "#shippers", hasDropdown: true },
   { label: "CARRIERS", href: "/carriers", hasDropdown: false },
+  /* Temporarily hidden — add back above ABOUT US when needed:
   { label: "RESOURCES", href: "#resources", hasDropdown: true },
+  */
   { label: "ABOUT US", href: "#about", hasDropdown: true },
   { label: "TRACKING", href: "#tracking", hasDropdown: true },
 ];
 
 const shippersDropdown: DropdownItem[] = [
   { label: "OVER THE ROAD", href: "/over-the-road" },
-  { label: "WAREHOUSE", href: "#warehouse" },
-  { label: "INTERMODAL", href: "#intermodal" },
+  { label: "WAREHOUSE", href: "/warehouse" },
+  { label: "INTERMODAL", href: "/intermodal" },
 ];
 
+/* Temporarily unused while RESOURCES nav is hidden — restore with nav item.
 const resourcesDropdown: DropdownItem[] = [
   { label: "BLOG", href: "#blog" },
   { label: "NEWSROOM", href: "#newsroom" },
 ];
+*/
 
-const aboutDropdown: DropdownItem[] = [{ label: "CAREERS", href: "#careers" }];
+const aboutDropdown: DropdownItem[] = [{ label: "CAREERS", href: "/careers" }];
 
 const trackingDropdown: DropdownItem[] = [
   { label: "TRACKING", href: "#tracking" },
@@ -154,13 +158,11 @@ export function Header() {
               const dropdownItems =
                 item.label === "SHIPPERS"
                   ? shippersDropdown
-                  : item.label === "RESOURCES"
-                    ? resourcesDropdown
-                    : item.label === "ABOUT US"
-                      ? aboutDropdown
-                      : item.label === "TRACKING"
-                        ? trackingDropdown
-                    : null;
+                  : item.label === "ABOUT US"
+                    ? aboutDropdown
+                    : item.label === "TRACKING"
+                      ? trackingDropdown
+                      : null;
               const dropdownWidthClass =
                 item.label === "TRACKING"
                   ? "w-52"
@@ -246,7 +248,7 @@ export function Header() {
               <Search className="size-[18px]" />
             </button>
             <Link
-              href="#quote"
+              href="/contact"
               className="rounded-full bg-[#fbbf24] px-4 py-2 text-[10px] font-bold tracking-wide text-neutral-900 shadow-sm transition-all duration-150 hover:-translate-y-px hover:bg-[#f59e0b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 sm:px-5"
             >
               GET A QUOTE
@@ -305,7 +307,7 @@ export function Header() {
               ))}
               <div className="mt-4 flex flex-col gap-3">
                 <Link
-                  href="#quote"
+                  href="/contact"
                   className="rounded-full bg-[#fbbf24] py-3 text-center text-sm font-bold text-neutral-900"
                   onClick={() => setMobileOpen(false)}
                 >

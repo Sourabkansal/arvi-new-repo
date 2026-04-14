@@ -56,7 +56,7 @@ export function CarriersPartnerSection() {
               and a partner invested in your growth.
             </p>
             <Link
-              href="#quote"
+              href="/contact"
               className="mt-8 inline-flex origin-center items-center justify-center rounded-full bg-[#004438] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-[transform,box-shadow,background-color,color] duration-300 ease-out hover:scale-[1.06] hover:bg-[#fbbf24] hover:text-neutral-900 hover:shadow-xl motion-reduce:transition-colors motion-reduce:duration-200 motion-reduce:hover:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbbf24] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:px-10 sm:py-4"
             >
               Get started
