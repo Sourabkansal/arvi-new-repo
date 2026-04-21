@@ -130,11 +130,11 @@ export function Header() {
             <span>(201) 259-9223</span>
           </a>
           <a
-            href="mailto:inquiry@sandsbrokerageinc.com"
+            href="mailto:inquiry@arvilogistic.com"
             className="hidden items-center gap-2 transition-opacity hover:opacity-90 sm:flex"
           >
             <Mail className="size-4 shrink-0" aria-hidden />
-            <span>inquiry@sandsbrokerageinc.com</span>
+            <span>inquiry@arvilogistic.com</span>
           </a>
         </div>
       </div>

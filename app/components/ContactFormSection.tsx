@@ -281,10 +281,10 @@ export function ContactFormSection() {
                   <Mail className="size-5" aria-hidden strokeWidth={2} />
                 </span>
                 <a
-                  href="mailto:inquiry@sandsbrokerageinc.com"
+                  href="mailto:inquiry@arvilogistic.com"
                   className="break-all text-sm font-semibold text-primary underline-offset-2 hover:underline"
                 >
-                  inquiry@sandsbrokerageinc.com
+                  inquiry@arvilogistic.com
                 </a>
               </li>
               <li className="flex items-center justify-center gap-3 sm:flex-col sm:text-center">
