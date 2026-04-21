@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  // Pin workspace root when multiple lockfiles exist (e.g. parent folder + this app).
+  turbopack: {
+    root: projectRoot,
+  },
   images: {
     remotePatterns: [
       {
@@ -34,12 +42,6 @@ const nextConfig: NextConfig = {
         pathname: "/wp-content/**",
       },
     ],
-  },
-  webpack: (config, { dev }) => {
-    if (dev) {
-      config.cache = false;
-    }
-    return config;
   },
 };
 

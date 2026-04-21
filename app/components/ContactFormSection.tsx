@@ -1,7 +1,7 @@
 "use client";
 
 import { Mail, Phone, Printer } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { submitContactForm } from "@/lib/contact/submitContactForm";
 import {
@@ -45,14 +45,9 @@ export function ContactFormSection() {
       >,
     ) => {
       setErrorMessage(null);
+      setFeedback((fb) => (fb === "success" ? "idle" : fb));
       setForm((f) => ({ ...f, [field]: e.target.value }));
     };
-
-  useEffect(() => {
-    if (feedback !== "success") return;
-    const dirty = Object.values(form).some((v) => v.trim() !== "");
-    if (dirty) setFeedback("idle");
-  }, [form, feedback]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
