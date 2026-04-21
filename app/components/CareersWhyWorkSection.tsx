@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const DOT_BG =
-  "radial-gradient(circle 1px at 1px 1px, rgba(0,0,0,0.07) 1px, transparent 0)";
+  "radial-gradient(circle 1px at 1px 1px, rgba(43,76,126,0.07) 1px, transparent 0)";
 
 const ICON_1 =
   "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/Careers-Icon-Image-1.webp";
@@ -43,43 +43,43 @@ const VALUE_CARDS: {
 export function CareersWhyWorkSection() {
   return (
     <section
-      className="py-14 sm:py-16 lg:py-20"
+      className="py-16 sm:py-20 lg:py-24"
       aria-labelledby="careers-why-work-heading"
       style={{
-        backgroundColor: "#f0f2f1",
+        backgroundColor: "#f8fafc",
         backgroundImage: DOT_BG,
         backgroundSize: "10px 10px",
       }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2
           id="careers-why-work-heading"
-          className="text-center text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl lg:text-[2.1rem]"
+          className="text-center text-2xl font-bold tracking-tight text-secondary sm:text-3xl lg:text-[2.1rem]"
         >
           Why work at ARVI Logistics?
         </h2>
 
-        <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-3 md:gap-5 lg:gap-8">
+        <div className="mt-12 grid gap-6 sm:mt-14 md:grid-cols-3 md:gap-6 lg:gap-8">
           {VALUE_CARDS.map(({ iconSrc, iconAlt, title, body }) => (
             <div
               key={title}
-              className="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-black/[0.06]"
+              className="overflow-hidden rounded-xl bg-surface-card shadow-card ring-1 ring-divider"
             >
-              <div className="flex items-center gap-3 bg-[#004438] px-4 py-4 sm:gap-4 sm:px-5 sm:py-[1.125rem]">
+              <div className="flex items-center gap-3 bg-secondary px-5 py-4 sm:gap-4 sm:px-6 sm:py-5">
                 <Image
                   src={iconSrc}
                   alt={iconAlt}
                   width={48}
                   height={48}
-                  className="size-11 shrink-0 object-contain object-left sm:size-12"
+                  className="size-11 shrink-0 rounded-lg object-contain object-left sm:size-12"
                   sizes="48px"
                 />
                 <p className="text-left text-sm font-bold leading-snug text-white sm:text-base">
                   {title}
                 </p>
               </div>
-              <div className="border-t border-neutral-100 px-4 py-5 sm:px-5 sm:py-6">
-                <p className="text-sm leading-relaxed text-neutral-900 sm:text-[15px] sm:leading-[1.65]">
+              <div className="border-t border-divider px-5 py-6 sm:px-6 sm:py-7">
+                <p className="text-sm leading-relaxed text-muted sm:text-[15px] sm:leading-[1.65]">
                   {body}
                 </p>
               </div>
@@ -87,10 +87,10 @@ export function CareersWhyWorkSection() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
+        <div className="mt-12 flex w-full justify-center px-1 sm:mt-14 sm:px-0">
           <Link
             href={RESUME_MAILTO}
-            className="inline-flex max-w-full rounded-full bg-[#004438] px-6 py-3.5 text-center text-[10px] font-bold uppercase leading-snug tracking-wide text-white shadow-md transition-colors duration-200 hover:bg-[#fbbf24] hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 sm:px-8 sm:py-4 sm:text-xs lg:max-w-3xl lg:text-[13px]"
+            className="inline-flex w-full max-w-lg justify-center rounded-xl bg-primary px-5 py-3.5 text-center text-[10px] font-semibold uppercase leading-snug tracking-wide text-white shadow-md shadow-primary/25 transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 sm:w-auto sm:max-w-3xl sm:px-8 sm:py-4 sm:text-xs lg:text-[13px]"
           >
             Ready to join the team? Share your resume with us today.
           </Link>

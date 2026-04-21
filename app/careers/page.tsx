@@ -4,8 +4,8 @@ import careersHeroBg from "@/Images/Carrers Page.png";
 import type { Metadata } from "next";
 import Image from "next/image";
 
-const CARD_BORDER = "#D1EAE2";
-const LINK_TEAL = "text-[#0f6b5e]";
+const CARD_BORDER = "#E5E7EB";
+const LINK_ACCENT = "text-primary";
 
 const HR_EMAIL = "mailto:HR@arvilogistics.com?subject=Careers%20Application";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen bg-canvas">
       <Header />
       <main>
         <section
@@ -34,19 +34,19 @@ export default function CareersPage() {
               sizes="100vw"
             />
             <div
-              className="absolute inset-0 bg-neutral-950/65"
+              className="absolute inset-0 bg-secondary-deep/68"
               aria-hidden
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/40 to-neutral-950/30"
+              className="absolute inset-0 bg-gradient-to-t from-secondary-deep/82 via-secondary/42 to-secondary/28"
               aria-hidden
             />
           </div>
 
-          <div className="relative mx-auto flex min-h-[min(44vh,420px)] max-w-7xl flex-col items-center justify-center px-4 py-16 text-center sm:min-h-[min(48vh,460px)] sm:py-20 lg:py-24">
+          <div className="relative mx-auto flex min-h-[min(44vh,420px)] max-w-[1280px] flex-col items-center justify-center px-4 py-16 text-center sm:min-h-[min(48vh,460px)] sm:py-20 lg:py-24">
             <h1
               id="careers-hero-heading"
-              className="text-4xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-[3.25rem]"
+              className="text-3xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-[3.25rem]"
             >
               Careers
             </h1>
@@ -60,20 +60,20 @@ export default function CareersPage() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <h2
               id="careers-openings-heading"
-              className="text-center text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl"
+              className="text-center text-2xl font-bold tracking-tight text-ink sm:text-3xl"
             >
               Current Openings
             </h2>
 
             <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 md:gap-8">
               <article
-                className="rounded-2xl border bg-white p-6 shadow-sm sm:p-8"
+                className="rounded-xl border bg-surface-card p-6 shadow-card sm:p-8"
                 style={{ borderColor: CARD_BORDER }}
               >
-                <h3 className="text-lg font-bold text-neutral-900 sm:text-xl">
+                <h3 className="text-lg font-bold text-ink sm:text-xl">
                   Engineering Professional
                 </h3>
-                <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-900 sm:text-[15px] sm:leading-[1.65]">
+                <div className="mt-5 space-y-4 text-sm leading-relaxed text-ink sm:text-[15px] sm:leading-[1.65]">
                   <p>
                     <span className="font-bold">Logistics Engineer (Iselin, NJ):</span>{" "}
                     Develop and deploy optimization models to drive strategic and
@@ -89,7 +89,7 @@ export default function CareersPage() {
                     <span className="font-bold">Apply:</span>{" "}
                     <a
                       href={HR_EMAIL}
-                      className={`font-semibold underline decoration-2 underline-offset-2 transition hover:opacity-90 ${LINK_TEAL}`}
+                      className={`font-semibold underline decoration-2 underline-offset-2 transition hover:text-primary-hover ${LINK_ACCENT}`}
                     >
                       HR@arvilogistics.com
                     </a>
@@ -98,13 +98,13 @@ export default function CareersPage() {
               </article>
 
               <article
-                className="rounded-2xl border bg-white p-6 shadow-sm sm:p-8"
+                className="rounded-xl border bg-surface-card p-6 shadow-card sm:p-8"
                 style={{ borderColor: CARD_BORDER }}
               >
-                <h3 className="text-lg font-bold text-neutral-900 sm:text-xl">
+                <h3 className="text-lg font-bold text-ink sm:text-xl">
                   IT Professional
                 </h3>
-                <div className="mt-5 space-y-4 text-sm leading-relaxed text-neutral-900 sm:text-[15px] sm:leading-[1.65]">
+                <div className="mt-5 space-y-4 text-sm leading-relaxed text-ink sm:text-[15px] sm:leading-[1.65]">
                   <p>
                     <span className="font-bold">Computer Programmer:</span> Write
                     computer programs to store, locate, and retrieve specific
@@ -119,7 +119,7 @@ export default function CareersPage() {
                     <span className="font-bold">Apply:</span>{" "}
                     <a
                       href={HR_EMAIL}
-                      className={`font-semibold underline decoration-2 underline-offset-2 transition hover:opacity-90 ${LINK_TEAL}`}
+                      className={`font-semibold underline decoration-2 underline-offset-2 transition hover:text-primary-hover ${LINK_ACCENT}`}
                     >
                       HR@arvilogistics.com
                     </a>

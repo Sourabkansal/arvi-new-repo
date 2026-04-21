@@ -32,7 +32,7 @@ function StarRating() {
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
-          className="size-6 text-amber-400"
+          className="size-6 text-primary"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden
@@ -81,60 +81,57 @@ export function TestimonialSlider() {
 
   return (
     <section
-      className="relative overflow-x-clip bg-[#111e1a] py-10 sm:py-12"
+      className="relative overflow-x-clip bg-secondary py-12 sm:py-14"
       aria-label="Testimonials"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary-deep/50 via-transparent to-secondary-deep/50"
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 text-center sm:mb-8">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 text-center sm:mb-10">
           <h2 className="text-xl font-bold text-white sm:text-2xl lg:text-3xl">
             Moving Freight. Earning Trust.
           </h2>
-          <div className="mt-2">
+          <div className="mt-3">
             <StarRating />
           </div>
         </div>
 
-        {/* Row: arrows + track — flex keeps center column visually centered */}
         <div className="flex items-center justify-center gap-2 sm:gap-4 lg:gap-6">
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Previous testimonial"
-            className="z-30 flex size-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 sm:size-10"
+            className="z-30 flex size-11 min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 sm:size-10 sm:min-h-0 sm:min-w-0"
           >
-            <ChevronLeft className="size-4 sm:size-5" />
+            <ChevronLeft className="size-5 sm:size-5" />
           </button>
 
           <div className="flex min-w-0 flex-1 items-center justify-center gap-2 sm:max-w-[min(100%,920px)] sm:gap-3 lg:gap-5">
-            {/* Left preview — smaller, recedes; transition feels like carousel motion */}
             <div
               className="hidden origin-center transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:scale-100 motion-reduce:opacity-100 sm:flex sm:w-[min(200px,22vw)] sm:shrink-0 sm:scale-[0.88] sm:opacity-[0.62] lg:w-[min(228px,20vw)] lg:scale-[0.9]"
             >
               <div
                 key={leftIdx}
-                className="testimonial-animate-side-left flex w-full flex-col justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-4 lg:px-4 lg:py-5"
+                className="testimonial-animate-side-left flex w-full flex-col justify-center rounded-xl border border-white/15 bg-white/10 px-3 py-4 lg:px-4 lg:py-5"
               >
-                <p className="line-clamp-5 text-center text-[11px] leading-relaxed text-white/65 lg:text-[12px]">
+                <p className="line-clamp-5 text-center text-[11px] leading-relaxed text-white/70 lg:text-[12px]">
                   {TESTIMONIALS[leftIdx].quote}
                 </p>
-                <p className="mt-2.5 text-center text-[10px] text-white/45 lg:text-[11px]">
+                <p className="mt-2.5 text-center text-[10px] text-white/50 lg:text-[11px]">
                   ~ {TESTIMONIALS[leftIdx].author}
                 </p>
               </div>
             </div>
 
-            {/* Center — larger scale, always centered in the track */}
-            <div className="relative z-20 flex shrink-0 justify-center">
+            <div className="relative z-20 min-w-0 flex shrink-0 justify-center">
               <div
-                className="relative w-full max-w-[min(100vw-6rem,440px)] origin-center scale-[1.03] rounded-2xl bg-white px-7 py-7 shadow-2xl shadow-black/50 transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:scale-100 sm:max-w-[420px] sm:scale-[1.1] sm:px-8 sm:py-8 lg:max-w-[480px] lg:scale-[1.14] lg:px-9 lg:py-9"
+                className="relative w-full max-w-[min(100vw-5rem,440px)] origin-center scale-[1.03] rounded-2xl bg-surface-card px-5 py-6 shadow-card-hover ring-1 ring-divider transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:scale-100 sm:max-w-[420px] sm:scale-[1.1] sm:px-8 sm:py-8 lg:max-w-[480px] lg:scale-[1.14] lg:px-9 lg:py-9"
               >
                 <span
-                  className="absolute -top-0.5 left-6 font-serif text-5xl font-bold leading-none text-[#004438]/90 sm:text-6xl lg:left-7 lg:text-[4rem]"
+                  className="absolute -top-0.5 left-6 font-heading text-5xl font-bold leading-none text-primary/90 sm:text-6xl lg:left-7 lg:text-[4rem]"
                   aria-hidden
                 >
                   &ldquo;&ldquo;
@@ -143,12 +140,12 @@ export function TestimonialSlider() {
                   key={active}
                   className="testimonial-animate-center"
                 >
-                  <p className="mt-6 text-center text-[13px] leading-relaxed text-neutral-800 sm:mt-7 sm:text-[15px] lg:text-base">
+                  <p className="mt-6 text-center text-[13px] leading-relaxed text-muted sm:mt-7 sm:text-[15px] lg:text-base">
                     {TESTIMONIALS[active].quote}
                   </p>
                   <div className="mt-5 text-center sm:mt-6">
-                    <span className="inline-block h-px w-10 bg-neutral-300" />
-                    <p className="mt-2 text-sm font-semibold text-neutral-900 sm:text-base">
+                    <span className="inline-block h-px w-10 bg-divider" />
+                    <p className="mt-2 text-sm font-semibold text-ink sm:text-base">
                       ~ {TESTIMONIALS[active].author}
                     </p>
                   </div>
@@ -161,12 +158,12 @@ export function TestimonialSlider() {
             >
               <div
                 key={rightIdx}
-                className="testimonial-animate-side-right flex w-full flex-col justify-center rounded-xl border border-white/10 bg-white/10 px-3 py-4 lg:px-4 lg:py-5"
+                className="testimonial-animate-side-right flex w-full flex-col justify-center rounded-xl border border-white/15 bg-white/10 px-3 py-4 lg:px-4 lg:py-5"
               >
-                <p className="line-clamp-5 text-center text-[11px] leading-relaxed text-white/65 lg:text-[12px]">
+                <p className="line-clamp-5 text-center text-[11px] leading-relaxed text-white/70 lg:text-[12px]">
                   {TESTIMONIALS[rightIdx].quote}
                 </p>
-                <p className="mt-2.5 text-center text-[10px] text-white/45 lg:text-[11px]">
+                <p className="mt-2.5 text-center text-[10px] text-white/50 lg:text-[11px]">
                   ~ {TESTIMONIALS[rightIdx].author}
                 </p>
               </div>
@@ -177,13 +174,13 @@ export function TestimonialSlider() {
             type="button"
             onClick={handleNext}
             aria-label="Next testimonial"
-            className="z-30 flex size-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 sm:size-10"
+            className="z-30 flex size-11 min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 sm:size-10 sm:min-h-0 sm:min-w-0"
           >
-            <ChevronRight className="size-4 sm:size-5" />
+            <ChevronRight className="size-5 sm:size-5" />
           </button>
         </div>
 
-        <div className="mt-6 flex justify-center gap-2 sm:mt-7">
+        <div className="mt-8 flex justify-center gap-2 sm:mt-9">
           {TESTIMONIALS.map((_, i) => (
             <button
               key={i}
@@ -192,8 +189,8 @@ export function TestimonialSlider() {
               aria-label={`Go to testimonial ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-500 ease-out ${
                 i === active
-                  ? "w-5 bg-amber-400"
-                  : "w-1.5 bg-white/30 hover:bg-white/50"
+                  ? "w-5 bg-primary"
+                  : "w-1.5 bg-white/35 hover:bg-white/55"
               }`}
             />
           ))}

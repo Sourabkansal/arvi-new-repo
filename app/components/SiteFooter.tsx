@@ -1,6 +1,4 @@
-import arviLogo from "@/Images/Arvi logo.png";
-import { playfair } from "@/lib/fonts";
-import Image from "next/image";
+import { montserrat } from "@/lib/fonts";
 import {
   ArrowUpRight,
   Facebook,
@@ -49,33 +47,31 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-neutral-800">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
-          {/* Column 1 — brand & social */}
+    <footer className="bg-surface-card text-ink">
+      <div className="mx-auto max-w-[1280px] px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 xl:gap-12">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3">
-              <Image
-                src={arviLogo}
-                alt=""
-                width={48}
-                height={48}
-                className="size-12 shrink-0 object-contain"
-                aria-hidden
-              />
+            <Link
+              href="/"
+              className={`${montserrat.className} inline-flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2`}
+            >
               <span className="min-w-0 text-left">
-                <span
-                  className={`${playfair.className} block text-lg font-bold leading-tight text-[#004438]`}
-                >
-                  ARVI Logistics
+                <span className="block leading-[1.15]">
+                  <span className="text-xl font-bold tracking-[1.5px] text-secondary sm:text-2xl">
+                    ARVI
+                  </span>
+                  <span className="text-base font-medium text-secondary sm:text-lg">
+                    {" "}
+                    Logistics
+                  </span>
                 </span>
-                <span className="mt-0.5 block text-xs italic text-[#2d6a4f]">
+                <span className="mt-0.5 block text-xs font-light leading-snug text-muted sm:text-sm">
                   Your Complete Transportation Solution
                 </span>
               </span>
             </Link>
 
-            <p className="mt-8 text-xs font-bold uppercase tracking-wide text-neutral-900">
+            <p className="mt-8 text-xs font-bold uppercase tracking-wide text-ink">
               Follow us
             </p>
             <ul className="mt-3 flex flex-wrap gap-2">
@@ -86,9 +82,9 @@ export function SiteFooter() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className={`flex size-9 items-center justify-center rounded-full border-2 border-[#004438] text-[#004438] transition hover:bg-[#004438]/10 ${
+                    className={`flex size-9 items-center justify-center rounded-full border-2 border-secondary text-secondary transition hover:bg-primary/10 hover:text-primary ${
                       accentRing
-                        ? "ring-2 ring-amber-400 ring-offset-2 ring-offset-white"
+                        ? "ring-2 ring-primary/40 ring-offset-2 ring-offset-surface-card"
                         : ""
                     }`}
                   >
@@ -99,54 +95,52 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Column 2 — contact */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wide text-neutral-900">
+            <h2 className="text-xs font-bold uppercase tracking-wide text-ink">
               Contact
             </h2>
-            <ul className="mt-5 space-y-4 text-sm text-neutral-700">
+            <ul className="mt-5 space-y-4 text-sm text-muted">
               <li className="flex gap-3">
                 <MapPin
-                  className="mt-0.5 size-4 shrink-0 text-[#004438]"
+                  className="mt-0.5 size-4 shrink-0 text-primary"
                   aria-hidden
                 />
-                <span>
+                <span className="min-w-0 break-words">
                   120 Wood Avenue South, Suite 408, Iselin, NJ 08830
                 </span>
               </li>
               <li className="flex gap-3">
                 <MapPin
-                  className="mt-0.5 size-4 shrink-0 text-[#004438]"
+                  className="mt-0.5 size-4 shrink-0 text-primary"
                   aria-hidden
                 />
-                <span>
+                <span className="min-w-0 break-words">
                   16821 Buccaneer Ln., Suite 200, Houston, Texas 77058
                 </span>
               </li>
               <li className="flex gap-3">
-                <Phone className="mt-0.5 size-4 shrink-0 text-[#004438]" aria-hidden />
+                <Phone className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
                 <a
                   href="tel:+12012599223"
-                  className="transition hover:text-[#004438]"
+                  className="transition hover:text-secondary"
                 >
                   (201) 259-9223
                 </a>
               </li>
               <li className="flex gap-3">
-                <Printer className="mt-0.5 size-4 shrink-0 text-[#004438]" aria-hidden />
-                <a href="tel:+12015375242" className="transition hover:text-[#004438]">
+                <Printer className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                <a href="tel:+12015375242" className="transition hover:text-secondary">
                   (201) 537-5242
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3 — information */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wide text-neutral-900">
+            <h2 className="text-xs font-bold uppercase tracking-wide text-ink">
               Information
             </h2>
-            <ul className="mt-5 space-y-2.5 text-sm text-neutral-700">
+            <ul className="mt-5 space-y-2.5 text-sm text-muted">
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "#about" },
@@ -158,10 +152,10 @@ export function SiteFooter() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex items-center gap-2 transition hover:text-[#004438]"
+                    className="group inline-flex items-center gap-2 transition hover:text-secondary"
                   >
                     <ArrowUpRight
-                      className="size-3.5 shrink-0 text-[#004438]"
+                      className="size-3.5 shrink-0 text-primary"
                       aria-hidden
                     />
                     {item.label}
@@ -171,12 +165,11 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Column 4 — services */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wide text-neutral-900">
+            <h2 className="text-xs font-bold uppercase tracking-wide text-ink">
               Company services
             </h2>
-            <ul className="mt-5 space-y-2.5 text-sm text-neutral-700">
+            <ul className="mt-5 space-y-2.5 text-sm text-muted">
               {[
                 { label: "Over-The-Road", href: "/over-the-road" },
                 { label: "Warehouse", href: "#warehouse" },
@@ -186,10 +179,10 @@ export function SiteFooter() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="group inline-flex items-center gap-2 transition hover:text-[#004438]"
+                    className="group inline-flex items-center gap-2 transition hover:text-secondary"
                   >
                     <ArrowUpRight
-                      className="size-3.5 shrink-0 text-[#004438]"
+                      className="size-3.5 shrink-0 text-primary"
                       aria-hidden
                     />
                     {item.label}
@@ -201,8 +194,8 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-black/10 bg-[#004438] text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-4 text-center text-xs sm:flex-row sm:text-left sm:text-sm md:px-6 lg:px-8">
+      <div className="border-t border-divider bg-secondary text-white">
+        <div className="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-3 px-4 py-4 text-center text-xs sm:flex-row sm:text-left sm:text-sm md:px-6 lg:px-8">
           <p>
             ©{year} ARVI Logistics | All Rights Reserved.
           </p>

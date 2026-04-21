@@ -1,17 +1,49 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-green: #004438;
-  --color-brand-green-dark: #00352c;
-  --color-brand-yellow: #fbbf24;
-  --color-hero-text: #1a2332;
-  --font-family-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-secondary: #2b4c7e;
+  --color-secondary-deep: #1e3a5f;
+  --color-canvas: #f8fafc;
+  --color-surface-card: #ffffff;
+  --color-divider: #e5e7eb;
+  --color-ink: #1f2937;
+  --color-muted: #6b7280;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 @layer base {
-  body {
-    @apply text-neutral-800;
+  html {
+    @apply scroll-smooth overflow-x-clip;
   }
+
+  body {
+    @apply bg-canvas text-ink antialiased leading-relaxed overflow-x-clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold tracking-tight text-ink;
+  }
+}
+
+@utility shadow-card {
+  box-shadow:
+    0 1px 3px 0 rgb(43 76 126 / 0.06),
+    0 4px 12px -2px rgb(43 76 126 / 0.08);
+}
+
+@utility shadow-card-hover {
+  box-shadow:
+    0 4px 6px -1px rgb(43 76 126 / 0.08),
+    0 10px 24px -4px rgb(43 76 126 / 0.12);
 }
 
 /* Testimonial slider — center card content entrance */

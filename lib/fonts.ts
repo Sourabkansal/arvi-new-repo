@@ -1,12 +1,20 @@
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Inter, Montserrat, Poppins } from "next/font/google";
 
-export const dmSans = DM_Sans({
+export const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  weight: ["400", "500"],
+  variable: "--font-inter",
 });
 
-export const playfair = Playfair_Display({
+export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["600", "700"],
-  variable: "--font-playfair",
+  variable: "--font-poppins",
+});
+
+/** Wordmark: ARVI (bold + tracking) + Logistics (medium) + tagline (light). */
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-montserrat",
 });

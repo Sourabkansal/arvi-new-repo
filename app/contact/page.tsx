@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen bg-canvas">
       <Header />
       <main>
         <ContactFormSection />

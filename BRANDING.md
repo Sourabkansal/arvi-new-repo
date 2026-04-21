@@ -15,7 +15,6 @@ Do **not** use “S & S Brokerage”, “S&S Brokerage”, or “S & S Brokerage
 ## Not automatically renamed (update when you have final assets)
 
 - **Contact email** in `Header.tsx` (`mailto:` and visible address) may still use the previous domain until a new inbox exists.
-- **Delivering Excellence icons** in `DeliveringExcellence.tsx` still load from `www.sandsbrokerageinc.com` URLs until those assets are hosted under your domain or in `/public`.
 
 ## npm package name
 

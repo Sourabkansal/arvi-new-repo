@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import arviLogo from "@/Images/Arvi logo.png";
-import { dmSans, playfair } from "@/lib/fonts";
+import { inter, montserrat, poppins } from "@/lib/fonts";
 import { SiteFooter } from "./components/SiteFooter";
 import "./globals.css";
 
@@ -8,10 +7,6 @@ export const metadata: Metadata = {
   title: "ARVI Logistics | Your Complete Transportation Solution",
   description:
     "Powering your supply chain, mile by mile. Freight brokerage for shippers and carriers.",
-  icons: {
-    icon: arviLogo.src,
-    apple: arviLogo.src,
-  },
 };
 
 export default function RootLayout({
@@ -22,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className} ${playfair.variable} antialiased`}
+        className={`${inter.className} ${poppins.variable} ${montserrat.variable} antialiased`}
       >
-        {children}
+        <div className="flex min-h-screen flex-col">{children}</div>
         <SiteFooter />
       </body>
     </html>

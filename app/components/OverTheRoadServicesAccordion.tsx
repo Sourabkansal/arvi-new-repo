@@ -5,8 +5,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { useId, useState } from "react";
 
-const TEAL_TITLE = "text-[#0d5d52]";
-const TEAL_LIST = "text-[#0f6b5e]";
+const NAVY_TITLE = "text-secondary";
+const BODY_MUTED = "text-muted";
 
 type ServicePanel = {
   id: string;
@@ -88,7 +88,7 @@ const SERVICES: ServicePanel[] = [
 ];
 
 const DOT_BG =
-  "radial-gradient(circle 1px at 1px 1px, rgba(0,0,0,0.07) 1px, transparent 0)";
+  "radial-gradient(circle 1px at 1px 1px, rgba(43,76,126,0.07) 1px, transparent 0)";
 
 export function OverTheRoadServicesAccordion() {
   const baseId = useId();
@@ -96,23 +96,23 @@ export function OverTheRoadServicesAccordion() {
 
   return (
     <section
-      className="relative py-16 sm:py-20 lg:py-24"
+      className="relative py-16 sm:py-20 lg:py-28"
       aria-labelledby="otr-services-heading"
       style={{
-        backgroundColor: "#f0f2f1",
+        backgroundColor: "#f8fafc",
         backgroundImage: DOT_BG,
         backgroundSize: "10px 10px",
       }}
     >
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2
           id="otr-services-heading"
-          className={`text-center text-2xl font-bold tracking-tight sm:text-3xl ${TEAL_TITLE}`}
+          className={`text-center text-2xl font-bold tracking-tight sm:text-3xl ${NAVY_TITLE}`}
         >
           Over-The-Road
         </h2>
 
-        <div className="mt-10 space-y-3 sm:mt-12 sm:space-y-3.5">
+        <div className="mt-12 space-y-4 sm:mt-14 sm:space-y-4">
           {SERVICES.map((service) => {
             const isOpen = openId === service.id;
             const panelId = `${baseId}-panel-${service.id}`;
@@ -121,7 +121,7 @@ export function OverTheRoadServicesAccordion() {
             return (
               <div
                 key={service.id}
-                className="overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-black/[0.04]"
+                className="overflow-hidden rounded-xl bg-surface-card shadow-card ring-1 ring-divider"
               >
                 <button
                   type="button"
@@ -131,23 +131,23 @@ export function OverTheRoadServicesAccordion() {
                   onClick={() =>
                     setOpenId((prev) => (prev === service.id ? "" : service.id))
                   }
-                  className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left sm:px-5 sm:py-4"
+                  className="flex w-full min-w-0 items-center justify-between gap-3 px-4 py-4 text-left sm:gap-4 sm:px-6 sm:py-5"
                 >
                   <span
-                    className={`text-sm font-bold leading-snug sm:text-base ${
-                      isOpen ? "text-neutral-900" : TEAL_TITLE
+                    className={`min-w-0 text-sm font-bold leading-snug sm:text-base ${
+                      isOpen ? "text-ink" : NAVY_TITLE
                     }`}
                   >
                     {service.title}
                   </span>
                   <span
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full border border-neutral-200/80 bg-white shadow-sm"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full border border-divider bg-canvas shadow-sm"
                     aria-hidden
                   >
                     {isOpen ? (
-                      <ChevronUp className="size-4 text-neutral-800" />
+                      <ChevronUp className="size-4 text-secondary" />
                     ) : (
-                      <ChevronDown className="size-4 text-neutral-800" />
+                      <ChevronDown className="size-4 text-secondary" />
                     )}
                   </span>
                 </button>
@@ -166,42 +166,45 @@ export function OverTheRoadServicesAccordion() {
                       role="region"
                       aria-labelledby={headerId}
                       aria-hidden={!isOpen}
-                      className={`border-t border-neutral-100 px-4 pb-6 pt-2 transition-[opacity,transform] duration-500 ease-out motion-reduce:transition-none sm:px-6 sm:pb-8 sm:pt-4 ${
+                      className={`border-t border-divider px-5 pb-7 pt-3 transition-[opacity,transform] duration-500 ease-out motion-reduce:transition-none sm:px-7 sm:pb-9 sm:pt-4 ${
                         isOpen
                           ? "translate-y-0 opacity-100 motion-reduce:translate-y-0"
                           : "pointer-events-none -translate-y-1 opacity-0 motion-reduce:translate-y-0"
                       }`}
                     >
-                      <div className="grid gap-8 lg:grid-cols-[1fr_min(42%,420px)] lg:items-start lg:gap-12">
+                      <div className="grid gap-10 lg:grid-cols-[1fr_min(42%,420px)] lg:items-start lg:gap-14">
                         <div>
                           {service.intro.map((para, idx) => (
                             <p
                               key={`${service.id}-intro-${idx}`}
-                              className={`text-sm leading-relaxed text-neutral-800 sm:text-[15px] ${idx > 0 ? "mt-4" : ""}`}
+                              className={`text-sm leading-relaxed text-muted sm:text-[15px] ${idx > 0 ? "mt-4" : ""}`}
                             >
                               {para}
                             </p>
                           ))}
                           <p
-                            className={`mt-5 text-sm font-bold sm:text-[15px] ${TEAL_TITLE}`}
+                            className={`mt-6 text-sm font-bold sm:text-[15px] ${NAVY_TITLE}`}
                           >
                             {service.whyHeading}
                           </p>
-                          <ol className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
+                          <ol className="mt-5 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
                             {service.points.map((point, i) => (
                               <li
                                 key={point}
-                                className={`flex gap-2 text-sm font-semibold leading-snug sm:text-[15px] ${TEAL_LIST}`}
+                                className={`flex gap-3 text-sm font-medium leading-snug sm:text-[15px] ${BODY_MUTED}`}
                               >
-                                <span className="shrink-0 font-bold">
-                                  {i + 1}.
+                                <span
+                                  className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white shadow-sm shadow-primary/25"
+                                  aria-hidden
+                                >
+                                  {i + 1}
                                 </span>
-                                <span>{point}</span>
+                                <span className="min-w-0 pt-0.5">{point}</span>
                               </li>
                             ))}
                           </ol>
                         </div>
-                        <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5 sm:max-w-[380px] lg:mx-0 lg:max-w-none">
+                        <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-card ring-1 ring-divider sm:max-w-[380px] lg:mx-0 lg:max-w-none">
                           <Image
                             src={warehouseImg}
                             alt="Warehouse worker loading freight onto a truck at sunset"

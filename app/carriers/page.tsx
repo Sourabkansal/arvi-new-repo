@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CarriersPage() {
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen bg-canvas">
       <Header />
       <main>
         <section
@@ -31,23 +31,23 @@ export default function CarriersPage() {
               sizes="100vw"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/92 via-[#0a1628]/65 to-[#0a1628]/25"
+              className="absolute inset-0 bg-gradient-to-r from-secondary-deep/92 via-secondary/70 to-secondary/25"
               aria-hidden
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/85 via-transparent to-[#0a1628]/30"
+              className="absolute inset-0 bg-gradient-to-t from-secondary-deep/85 via-transparent to-secondary/35"
               aria-hidden
             />
           </div>
 
-          <div className="relative mx-auto flex min-h-[min(54vh,510px)] max-w-7xl flex-col justify-center px-4 pb-12 pt-12 sm:px-6 sm:pb-14 sm:pt-14 lg:px-8 lg:pb-16 lg:pt-16">
+          <div className="relative mx-auto flex min-h-[min(54vh,510px)] max-w-[1280px] flex-col justify-center px-4 pb-12 pt-12 sm:px-6 sm:pb-14 sm:pt-14 lg:px-8 lg:pb-16 lg:pt-16">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/90 drop-shadow-sm">
                 Carriers
               </p>
               <h1
                 id="carriers-hero-heading"
-                className="mt-3 text-3xl font-extrabold leading-[1.12] tracking-tight text-white drop-shadow-md sm:mt-4 sm:text-4xl sm:leading-[1.1] lg:text-[2.65rem] lg:leading-[1.08]"
+                className="mt-3 text-[clamp(1.45rem,4.8vw,1.85rem)] font-extrabold leading-[1.12] tracking-tight text-white drop-shadow-md sm:mt-4 sm:text-4xl sm:leading-[1.1] lg:text-[2.65rem] lg:leading-[1.08]"
               >
                 <span className="block">
                   Keep Rolling With Reliable Loads and a Team That Has Your Back
@@ -61,7 +61,7 @@ export default function CarriersPage() {
               <div className="mt-8 sm:mt-9">
                 <Link
                   href="/contact"
-                  className="inline-flex rounded-full bg-[#004438] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition-colors duration-200 hover:bg-[#fbbf24] hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]/80"
+                  className="inline-flex rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-deep/80"
                 >
                   Haul with us
                 </Link>

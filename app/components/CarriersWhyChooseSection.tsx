@@ -8,9 +8,9 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-const CARD_BG = "#F0F9F6";
-const CARD_BORDER = "#D1EAE2";
-const ICON_COLOR = "#0A4D3C";
+const CARD_BG = "#FFF7ED";
+const CARD_BORDER = "#FED7AA";
+const ICON_COLOR = "#F97316";
 
 const CARDS: {
   title: string;
@@ -94,23 +94,23 @@ function CardIcon({ variant }: { variant: "lanes" | "payouts" | "support" }) {
 export function CarriersWhyChooseSection() {
   return (
     <section
-      className="bg-white py-12 sm:py-16 lg:py-20"
+      className="bg-surface-card py-16 sm:py-20 lg:py-24"
       aria-labelledby="carriers-why-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2
           id="carriers-why-heading"
-          className="max-w-4xl text-left text-3xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
+          className="max-w-4xl text-left text-[clamp(1.45rem,4.2vw,1.85rem)] font-bold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
         >
           Why Carriers Choose ARVI Logistics
         </h2>
 
-        <div className="mt-8 grid items-stretch gap-8 sm:mt-10 sm:gap-10 lg:mt-11 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-14">
-          <ul className="flex list-none flex-col gap-4 p-0 sm:gap-[18px]">
+        <div className="mt-10 grid items-stretch gap-10 sm:mt-12 sm:gap-12 lg:mt-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14 xl:gap-16">
+          <ul className="flex list-none flex-col gap-4 p-0 sm:gap-5">
             {CARDS.map(({ icon, title, body }) => (
               <li
                 key={title}
-                className="flex gap-4 rounded-[14px] border p-5 sm:gap-5 sm:p-[22px]"
+                className="flex gap-4 rounded-xl border p-6 shadow-card sm:gap-5 sm:p-7"
                 style={{
                   backgroundColor: CARD_BG,
                   borderColor: CARD_BORDER,
@@ -120,10 +120,10 @@ export function CarriersWhyChooseSection() {
                   <CardIcon variant={icon} />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-base font-bold leading-snug text-neutral-900 sm:text-lg">
+                  <h3 className="text-base font-bold leading-snug text-secondary sm:text-lg">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm font-medium leading-relaxed text-neutral-900 sm:text-[15px] sm:leading-[1.65]">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-muted sm:text-[15px] sm:leading-[1.65]">
                     {body}
                   </p>
                 </div>
@@ -132,7 +132,7 @@ export function CarriersWhyChooseSection() {
           </ul>
 
           <div
-            className="relative min-h-[260px] w-full overflow-hidden rounded-[14px] border shadow-sm sm:min-h-[300px] lg:min-h-full"
+            className="relative min-h-[260px] w-full overflow-hidden rounded-xl border shadow-card sm:min-h-[300px] lg:min-h-full"
             style={{ borderColor: CARD_BORDER }}
           >
             <Image

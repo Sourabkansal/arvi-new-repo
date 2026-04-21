@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const DOT_BG =
-  "radial-gradient(circle 1px at 1px 1px, rgba(255,255,255,0.45) 1px, transparent 0)";
+  "radial-gradient(circle 1px at 1px 1px, rgba(255,255,255,0.35) 1px, transparent 0)";
 
 function EdgeDotFade({ side }: { side: "left" | "right" }) {
   const mask =
@@ -31,21 +31,21 @@ export function CarriersPartnerSection() {
   return (
     <section
       id="carriers"
-      className="relative overflow-hidden bg-black text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-secondary via-secondary-deep to-[#1a3052] text-white"
       aria-labelledby="carriers-partner-heading"
     >
       <EdgeDotFade side="left" />
       <EdgeDotFade side="right" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14 xl:gap-16">
+      <div className="relative mx-auto max-w-[1280px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <div>
             <h2
               id="carriers-partner-heading"
-              className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem] lg:leading-[1.15]"
+              className="text-[clamp(1.45rem,4.2vw,1.9rem)] font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem] lg:leading-[1.15]"
             >
               <span className="block">Drive More. Earn More.</span>
-              <span className="mt-2 block">Partner with ARVI Logistics.</span>
+              <span className="mt-2 block text-primary">Partner with ARVI Logistics.</span>
             </h2>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/90 sm:text-base">
               Join our trusted carrier network and keep your wheels moving with
@@ -57,14 +57,14 @@ export function CarriersPartnerSection() {
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex origin-center items-center justify-center rounded-full bg-[#004438] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-[transform,box-shadow,background-color,color] duration-300 ease-out hover:scale-[1.06] hover:bg-[#fbbf24] hover:text-neutral-900 hover:shadow-xl motion-reduce:transition-colors motion-reduce:duration-200 motion-reduce:hover:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbbf24] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:px-10 sm:py-4"
+              className="mt-9 inline-flex origin-center items-center justify-center rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-[transform,box-shadow,background-color] duration-300 ease-out hover:scale-[1.03] hover:bg-primary-hover hover:shadow-xl motion-reduce:transition-colors motion-reduce:duration-200 motion-reduce:hover:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-deep sm:px-10 sm:py-4"
             >
               Get started
             </Link>
           </div>
 
           <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:max-w-none">
-            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[20px] shadow-2xl ring-1 ring-white/10 sm:aspect-[4/3] lg:min-h-[340px] lg:aspect-[16/11]">
+            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl shadow-card-hover ring-1 ring-white/15 sm:aspect-[4/3] lg:min-h-[340px] lg:aspect-[16/11]">
               <Image
                 src={truckImage}
                 alt="ARVI Logistics semi-truck with city skyline"

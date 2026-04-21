@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function WarehousePage() {
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen bg-canvas">
       <Header />
       <main>
         <section
@@ -31,23 +31,23 @@ export default function WarehousePage() {
               sizes="100vw"
             />
             <div
-              className="absolute inset-0 bg-neutral-950/60"
+              className="absolute inset-0 bg-secondary-deep/65"
               aria-hidden
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/35 to-neutral-950/25"
+              className="absolute inset-0 bg-gradient-to-t from-secondary-deep/80 via-secondary/40 to-secondary/30"
               aria-hidden
             />
           </div>
 
-          <div className="relative mx-auto flex min-h-[min(56vh,560px)] max-w-7xl flex-col items-center justify-center px-4 pb-14 pt-12 text-center sm:px-6 sm:pb-16 sm:pt-14 lg:px-8 lg:pb-20 lg:pt-16">
+          <div className="relative mx-auto flex min-h-[min(56vh,560px)] max-w-[1280px] flex-col items-center justify-center px-4 pb-14 pt-12 text-center sm:px-6 sm:pb-16 sm:pt-14 lg:px-8 lg:pb-20 lg:pt-16">
             <h1
               id="warehouse-hero-heading"
-              className="text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-[3.25rem]"
+              className="text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-[3.25rem]"
             >
               Warehouse
             </h1>
-            <p className="mt-3 max-w-3xl text-xl font-bold leading-snug text-white sm:mt-4 sm:text-2xl lg:text-[1.65rem] lg:leading-snug">
+            <p className="mt-3 max-w-3xl text-lg font-bold leading-snug text-white sm:mt-4 sm:text-2xl lg:text-[1.65rem] lg:leading-snug">
               Secure Storage, Streamlined Logistics
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 sm:mt-6 sm:text-lg">
@@ -57,7 +57,7 @@ export default function WarehousePage() {
             <div className="mt-9 sm:mt-10">
               <Link
                 href="/contact"
-                className="inline-flex rounded-full bg-[#004438] px-9 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition-colors duration-200 hover:bg-[#fbbf24] hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900/80"
+                className="inline-flex rounded-xl bg-primary px-9 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-deep/80"
               >
                 Find a warehouse
               </Link>
