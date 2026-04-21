@@ -14,7 +14,7 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[min(76vh,760px)] w-full overflow-hidden">
+    <section className="relative min-h-[min(82vh,820px)] w-full overflow-hidden sm:min-h-[min(76vh,760px)]">
       <div className="absolute inset-0">
         <Image
           src={HERO_IMAGE}
@@ -34,7 +34,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[min(76vh,760px)] max-w-[1280px] min-w-0 flex-col px-4 pb-32 pt-12 sm:px-6 sm:pb-36 sm:pt-16 lg:px-8">
+      <div className="relative mx-auto flex min-h-[min(82vh,820px)] max-w-[1280px] min-w-0 flex-col px-4 pb-44 pt-12 sm:min-h-[min(76vh,760px)] sm:pb-36 sm:pt-16 lg:px-8">
         <div className="min-w-0 max-w-2xl">
           <p className="mb-4 inline-flex max-w-full items-center rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/95 backdrop-blur-sm sm:px-4 sm:text-sm sm:tracking-[0.2em]">
             Freight brokerage · Logistics
@@ -50,7 +50,7 @@ export function Hero() {
             stays on schedule.
           </p>
 
-          <ul className="mt-8 flex flex-wrap gap-3">
+          <ul className="mt-8 mb-6 flex flex-wrap gap-3 sm:mb-0">
             {highlights.map(({ label, icon: Icon }) => (
               <li
                 key={label}
@@ -64,7 +64,8 @@ export function Hero() {
         </div>
 
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex justify-center px-3 sm:px-6 lg:px-8">
-          <div className="pointer-events-auto w-full max-w-[1240px] translate-y-[32%] rounded-2xl bg-surface-card p-5 shadow-card-hover ring-1 ring-divider sm:translate-y-1/3 sm:p-7 md:p-8">
+          {/* Mobile: push card further down so it sits on the canvas and clears hero tags/background */}
+          <div className="pointer-events-auto w-full max-w-[1240px] translate-y-[58%] rounded-2xl bg-surface-card p-5 shadow-card-hover ring-1 ring-divider sm:translate-y-[40%] md:translate-y-1/3 sm:p-7 md:p-8">
             <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
               <div className="min-w-0">
                 <p className="text-center text-sm font-medium leading-relaxed text-muted sm:text-base lg:text-left lg:text-lg">
@@ -95,7 +96,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="h-20 bg-canvas sm:h-24" aria-hidden />
+      {/* Extra canvas strip on mobile so the lowered card clears the hero image */}
+      <div className="h-28 bg-canvas sm:h-24" aria-hidden />
     </section>
   );
 }
