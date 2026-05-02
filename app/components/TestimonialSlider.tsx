@@ -92,7 +92,7 @@ export function TestimonialSlider() {
       <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center sm:mb-10">
           <h2 className="text-xl font-bold text-white sm:text-2xl lg:text-3xl">
-            Moving Freight. Earning Trust.
+            Hauling Freight. Earning Confidence. Every Load Matters.
           </h2>
           <div className="mt-3">
             <StarRating />

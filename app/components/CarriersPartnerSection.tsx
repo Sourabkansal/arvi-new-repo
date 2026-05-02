@@ -1,4 +1,4 @@
-import truckImage from "@/Images/Arvi truck.png";
+import truckImage from "@/Images/Arvi truck image.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,8 +44,8 @@ export function CarriersPartnerSection() {
               id="carriers-partner-heading"
               className="text-[clamp(1.45rem,4.2vw,1.9rem)] font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem] lg:leading-[1.15]"
             >
-              <span className="block">Drive More. Earn More.</span>
-              <span className="mt-2 block text-primary">Partner with ARVI Logistics.</span>
+              <span className="block">Drive Further. Earn Bigger.</span>
+              <span className="mt-2 block text-primary">Grow with Arvi Logistics.</span>
             </h2>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/90 sm:text-base">
               Join our trusted carrier network and keep your wheels moving with

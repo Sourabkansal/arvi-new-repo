@@ -70,7 +70,7 @@ export default function WarehousePage() {
         <LogisticsCtaBanner
           headline="Need warehousing that fits your network?"
           subheading="Speak with our team about locations, handling, and integration with your transportation plan."
-          buttonText="Call (201) 259-9223"
+          buttonText="Call (570) 330-6181"
           backgroundImage={warehouseHeroBg}
         />
       </main>

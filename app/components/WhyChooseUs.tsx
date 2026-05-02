@@ -137,7 +137,7 @@ export function WhyChooseUs() {
           id="why-choose-heading"
           className="text-center text-3xl font-bold tracking-tight text-ink sm:text-4xl"
         >
-          Why Choose ARVI Logistics?
+          Built on Trust. Backed by ARVI Logistics
         </h2>
 
         <div className="mt-10 flex flex-col items-center gap-10 sm:mt-16 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-10 sm:gap-y-12 lg:mt-16 lg:gap-16">

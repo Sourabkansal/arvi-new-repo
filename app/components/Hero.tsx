@@ -73,9 +73,11 @@ export function Hero() {
             Freight brokerage · Logistics
           </p>
           <h1 className="text-[clamp(1.65rem,5.5vw,2.25rem)] font-bold leading-[1.1] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
-            Powering Your Supply Chain,
+            Connecting Capacity. Delivering Confidence
             <br />
-            <span className="text-primary">Mile by Mile</span>
+            <span className="block text-[clamp(1.45rem,4.75vw,2rem)] text-primary sm:text-[2.65rem] lg:text-[2.75rem] lg:leading-[1.08]">
+              Every Load, Every Mile
+            </span>
           </h1>
           <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/90 sm:text-lg">
             From spot loads to contract freight, we connect shippers with

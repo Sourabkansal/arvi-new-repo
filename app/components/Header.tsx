@@ -123,18 +123,18 @@ export function Header() {
       <div className="bg-secondary text-white">
         <div className="mx-auto flex max-w-[1280px] justify-end gap-6 px-4 py-2 text-[11px] font-medium tracking-wide sm:gap-10 lg:px-6">
           <a
-            href="tel:+12012599223"
+            href="tel:+15703306181"
             className="flex items-center gap-2 transition-opacity hover:opacity-90"
           >
             <Phone className="size-4 shrink-0" aria-hidden />
-            <span>(201) 259-9223</span>
+            <span>(570) 330-6181</span>
           </a>
           <a
-            href="mailto:inquiry@arvilogistic.com"
+            href="mailto:Inquiry@arvilogisticsinc.com"
             className="hidden items-center gap-2 transition-opacity hover:opacity-90 sm:flex"
           >
             <Mail className="size-4 shrink-0" aria-hidden />
-            <span>inquiry@arvilogistic.com</span>
+            <span>Inquiry@arvilogisticsinc.com</span>
           </a>
         </div>
       </div>

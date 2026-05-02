@@ -7,7 +7,8 @@ import Image from "next/image";
 const CARD_BORDER = "#E5E7EB";
 const LINK_ACCENT = "text-primary";
 
-const HR_EMAIL = "mailto:HR@arvilogistics.com?subject=Careers%20Application";
+const HR_EMAIL =
+  "mailto:Inquiry@arvilogisticsinc.com?subject=Careers%20Application";
 
 export const metadata: Metadata = {
   title: "Careers | ARVI Logistics",
@@ -75,7 +76,7 @@ export default function CareersPage() {
                 </h3>
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-ink sm:text-[15px] sm:leading-[1.65]">
                   <p>
-                    <span className="font-bold">Logistics Engineer (Iselin, NJ):</span>{" "}
+                    <span className="font-bold">Logistics Engineer (Hazle Township, PA):</span>{" "}
                     Develop and deploy optimization models to drive strategic and
                     tactical decisions across supply chain and logistics functions
                     for transportation brokerage services using various software
@@ -83,7 +84,8 @@ export default function CareersPage() {
                   </p>
                   <p>
                     <span className="font-bold">Mailing address:</span> ARVI
-                    Logistics, 120 Wood Avenue South, Suite 408, Iselin, NJ 08830.
+                    Logistics, 150 Dessen Drive, Suite B, Hazle Township, PA
+                    18201.
                   </p>
                   <p>
                     <span className="font-bold">Apply:</span>{" "}
@@ -91,7 +93,7 @@ export default function CareersPage() {
                       href={HR_EMAIL}
                       className={`font-semibold underline decoration-2 underline-offset-2 transition hover:text-primary-hover ${LINK_ACCENT}`}
                     >
-                      HR@arvilogistics.com
+                      Inquiry@arvilogisticsinc.com
                     </a>
                   </p>
                 </div>
@@ -109,11 +111,12 @@ export default function CareersPage() {
                     <span className="font-bold">Computer Programmer:</span> Write
                     computer programs to store, locate, and retrieve specific
                     documents, data, and information using various software. Job
-                    location in Iselin, NJ.
+                    location in Hazle Township, PA.
                   </p>
                   <p>
                     <span className="font-bold">Mailing address:</span> ARVI
-                    Logistics, 120 Wood Avenue South, Suite 408, Iselin, NJ 08830.
+                    Logistics, 150 Dessen Drive, Suite B, Hazle Township, PA
+                    18201.
                   </p>
                   <p>
                     <span className="font-bold">Apply:</span>{" "}
@@ -121,7 +124,7 @@ export default function CareersPage() {
                       href={HR_EMAIL}
                       className={`font-semibold underline decoration-2 underline-offset-2 transition hover:text-primary-hover ${LINK_ACCENT}`}
                     >
-                      HR@arvilogistics.com
+                      Inquiry@arvilogisticsinc.com
                     </a>
                   </p>
                 </div>

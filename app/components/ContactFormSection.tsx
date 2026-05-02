@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Printer } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 import { submitContactForm } from "@/lib/contact/submitContactForm";
@@ -166,7 +166,7 @@ export function ContactFormSection() {
                   value={form.phone}
                   onChange={update("phone")}
                   className={inputClass}
-                  placeholder="(201) 555-0100"
+                  placeholder="(570) 330-6181"
                 />
               </div>
             </div>
@@ -270,10 +270,10 @@ export function ContactFormSection() {
                   <Phone className="size-5" aria-hidden strokeWidth={2} />
                 </span>
                 <a
-                  href="tel:+12012599223"
+                  href="tel:+15703306181"
                   className="text-sm font-semibold text-ink transition hover:text-primary"
                 >
-                  (201) 259-9223
+                  (570) 330-6181
                 </a>
               </li>
               <li className="flex items-center justify-center gap-3 sm:flex-col sm:text-center">
@@ -281,22 +281,21 @@ export function ContactFormSection() {
                   <Mail className="size-5" aria-hidden strokeWidth={2} />
                 </span>
                 <a
-                  href="mailto:inquiry@arvilogistic.com"
+                  href="mailto:Inquiry@arvilogisticsinc.com"
                   className="break-all text-sm font-semibold text-primary underline-offset-2 hover:underline"
                 >
-                  inquiry@arvilogistic.com
+                  Inquiry@arvilogisticsinc.com
                 </a>
               </li>
-              <li className="flex items-center justify-center gap-3 sm:flex-col sm:text-center">
+              <li className="flex max-w-xs items-center justify-center gap-3 sm:flex-col sm:text-center">
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary">
-                  <Printer className="size-5" aria-hidden strokeWidth={2} />
+                  <MapPin className="size-5" aria-hidden strokeWidth={2} />
                 </span>
-                <a
-                  href="tel:+12015375242"
-                  className="text-sm font-semibold text-ink transition hover:text-primary"
-                >
-                  (201) 537-5242
-                </a>
+                <span className="text-center text-sm font-semibold text-ink">
+                  150 Dessen Drive, Suite B
+                  <br />
+                  Hazle Township, PA 18201
+                </span>
               </li>
             </ul>
           </div>

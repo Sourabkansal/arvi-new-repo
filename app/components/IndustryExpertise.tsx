@@ -89,7 +89,7 @@ export function IndustryExpertise() {
           id="industry-expertise-heading"
           className="text-center text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-[1.75rem] lg:leading-snug"
         >
-          Industry Expertise That Moves Business Forward
+          Where Industry Expertise Meets Business Performance
         </h2>
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-muted sm:text-base">
           We serve a wide range of sectors with logistics solutions tailored to

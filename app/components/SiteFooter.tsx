@@ -4,9 +4,9 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Mail,
   MapPin,
   Phone,
-  Printer,
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
@@ -106,31 +106,25 @@ export function SiteFooter() {
                   aria-hidden
                 />
                 <span className="min-w-0 break-words">
-                  120 Wood Avenue South, Suite 408, Iselin, NJ 08830
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <MapPin
-                  className="mt-0.5 size-4 shrink-0 text-primary"
-                  aria-hidden
-                />
-                <span className="min-w-0 break-words">
-                  16821 Buccaneer Ln., Suite 200, Houston, Texas 77058
+                  150 Dessen Drive, Suite B, Hazle Township, PA 18201
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
                 <a
-                  href="tel:+12012599223"
+                  href="tel:+15703306181"
                   className="transition hover:text-secondary"
                 >
-                  (201) 259-9223
+                  (570) 330-6181
                 </a>
               </li>
               <li className="flex gap-3">
-                <Printer className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
-                <a href="tel:+12015375242" className="transition hover:text-secondary">
-                  (201) 537-5242
+                <Mail className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                <a
+                  href="mailto:Inquiry@arvilogisticsinc.com"
+                  className="min-w-0 break-all transition hover:text-secondary"
+                >
+                  Inquiry@arvilogisticsinc.com
                 </a>
               </li>
             </ul>
@@ -145,8 +139,6 @@ export function SiteFooter() {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "#about" },
                 { label: "Careers", href: "/careers" },
-                { label: "Tracking", href: "#tracking" },
-                { label: "Blog", href: "#blog" },
                 { label: "Contact Us", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>

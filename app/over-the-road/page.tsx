@@ -2,7 +2,7 @@ import { Header } from "../components/Header";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import { OverTheRoadServicesAccordion } from "../components/OverTheRoadServicesAccordion";
 import overTheRoadBg from "@/Images/over-the-road-truck.jpg";
-import tailoredFreightImg from "@/Images/rightloding-column-img.webp";
+import tailoredFreightImg from "@/Images/Right side loading image.png";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -87,11 +87,11 @@ export default function OverTheRoadPage() {
                   speed, efficiency, and complete visibility at every step.
                 </p>
               </div>
-              <div>
-                <div className="relative mx-auto aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl shadow-card ring-1 ring-divider sm:aspect-[5/4] lg:mx-0 lg:max-w-none lg:min-h-[min(100%,420px)]">
+              <div className="min-w-0 lg:min-h-0">
+                <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl shadow-card ring-1 ring-divider lg:mx-0">
                   <Image
                     src={tailoredFreightImg}
-                    alt="Commercial truck and shipping containers — freight and logistics"
+                    alt="Forklift loading palletized freight into a shipping container at a loading dock"
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"

@@ -12,7 +12,7 @@ const ICON_3 =
   "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/Careers-Icon-Image-3.webp";
 
 const RESUME_MAILTO =
-  "mailto:HR@arvilogistics.com?subject=Resume%20-%20Careers%20Application";
+  "mailto:Inquiry@arvilogisticsinc.com?subject=Resume%20-%20Careers%20Application";
 
 const VALUE_CARDS: {
   iconSrc: string;

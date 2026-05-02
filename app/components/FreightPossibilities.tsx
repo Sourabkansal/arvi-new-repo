@@ -1,6 +1,6 @@
 "use client";
 
-import freightColumnImage from "@/Images/rightloding-column-img.webp";
+import freightColumnImage from "@/Images/Right side loading image.png";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useId, useState, type ReactNode } from "react";
@@ -125,13 +125,13 @@ export function FreightPossibilities() {
       aria-labelledby="freight-possibilities-heading"
     >
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
-          <div className="lg:col-span-7">
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:items-stretch lg:gap-12 xl:gap-16">
+          <div className="flex flex-col lg:col-span-6">
             <h2
               id="freight-possibilities-heading"
               className="max-w-xl text-[clamp(1.35rem,4.5vw,1.75rem)] font-bold leading-[1.15] tracking-tight text-ink sm:text-4xl lg:text-[2.25rem] lg:leading-[1.2]"
             >
-              Your Freight. Our Network. Unlimited Possibilities.
+              Connecting Your Freight to the Right Capacity—Every Time.
             </h2>
 
             <div className="mt-10 overflow-hidden rounded-none border border-divider bg-surface-card shadow-card sm:rounded-xl">
@@ -220,14 +220,14 @@ export function FreightPossibilities() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-divider shadow-card ring-1 ring-divider sm:aspect-[3/4] lg:aspect-[4/5] lg:sticky lg:top-28">
+          <div className="flex flex-col lg:col-span-6 lg:h-full lg:min-h-0">
+            <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-divider shadow-card ring-1 ring-divider lg:aspect-auto lg:min-h-0 lg:flex-1">
               <Image
                 src={freightColumnImage}
                 alt="Forklift loading palletized freight into a shipping container"
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
             </div>

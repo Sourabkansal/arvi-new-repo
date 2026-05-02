@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "ARVI Logistics | Your Complete Transportation Solution",
   description:
-    "Powering your supply chain, mile by mile. Freight brokerage for shippers and carriers.",
+    "Connecting capacity. Delivering confidence every load, every mile. Freight brokerage for shippers and carriers.",
 };
 
 export default function RootLayout({
