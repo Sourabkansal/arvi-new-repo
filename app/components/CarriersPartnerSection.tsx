@@ -1,4 +1,4 @@
-import truckImage from "@/Images/Arvi truck image.png";
+import truckImage from "@/Images/right image truck.png";
 import Image from "next/image";
 import Link from "next/link";
 

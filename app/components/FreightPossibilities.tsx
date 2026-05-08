@@ -1,6 +1,6 @@
 "use client";
 
-import freightColumnImage from "@/Images/Right side loading image.png";
+import freightColumnImage from "@/Images/right image hero second.png";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useId, useState, type ReactNode } from "react";
@@ -112,10 +112,10 @@ export function FreightPossibilities() {
   }, []);
 
   const subTabs: { id: SubTabId; label: string }[] = [
-    { id: "ltl", label: "LTL" },
-    { id: "ftl", label: "FTL" },
-    { id: "drayage", label: "Drayage" },
-    { id: "flatbed", label: "Flatbed" },
+    { id: "ltl", label: "Partial Freight Solutions" },
+    { id: "ftl", label: "Dedicated Truckload Services" },
+    { id: "drayage", label: "Port & Rail Logistics" },
+    { id: "flatbed", label: "Open Deck Transport" },
   ];
 
   return (
@@ -226,7 +226,7 @@ export function FreightPossibilities() {
                 src={freightColumnImage}
                 alt="Forklift loading palletized freight into a shipping container"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-left"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

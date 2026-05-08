@@ -6,8 +6,6 @@ import { Hero } from "./components/Hero";
 import { LogisticsCtaBanner } from "./components/LogisticsCtaBanner";
 import { IndustryExpertise } from "./components/IndustryExpertise";
 import { TestimonialSlider } from "./components/TestimonialSlider";
-import { WhyChooseUs } from "./components/WhyChooseUs";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-canvas">
@@ -17,7 +15,6 @@ export default function Home() {
         <FreightPossibilities />
         <LogisticsCtaBanner />
         <CarriersPartnerSection />
-        <WhyChooseUs />
         <IndustryExpertise />
         <TestimonialSlider />
         <section

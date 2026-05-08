@@ -19,7 +19,7 @@ type ServicePanel = {
 const SERVICES: ServicePanel[] = [
   {
     id: "ltl",
-    title: "Less-Than-Truckload (LTL) Shipping",
+    title: "Partial Freight Solutions",
     intro: [
       "Our LTL network consolidates partial shipments alongside compatible freight so you pay only for the space and weight you use—without sacrificing transit predictability. From regional distribution to long-haul linehaul, we match your freight profile to the right carrier mix and service level.",
       "Expect disciplined pickup windows, transparent milestones, and proactive communication when exceptions arise. We treat every pallet as mission-critical, whether you move a few skids a week or high-frequency replenishment programs.",
@@ -36,7 +36,7 @@ const SERVICES: ServicePanel[] = [
   },
   {
     id: "ftl",
-    title: "Full Truckload (FTL) Shipping",
+    title: "Dedicated Truckload Services",
     intro: [
       "When your freight warrants an entire trailer, we secure dedicated capacity aligned to your loading schedule, commodity requirements, and delivery window. Ideal for high-cube loads, sensitive cargo, or shipments where co-mingling is not an option.",
       "Our team validates equipment type, driver qualifications, and routing constraints before dispatch—so your product moves under a single bill of lading with minimal handling and maximum control.",
@@ -53,7 +53,7 @@ const SERVICES: ServicePanel[] = [
   },
   {
     id: "drayage",
-    title: "Drayage Services",
+    title: "Port & Rail Logistics",
     intro: [
       "Drayage is the critical link between ocean terminals, rail ramps, and your warehouse floor. We coordinate container pulls, chassis availability, and gate appointments so imports and exports keep moving without costly idle time.",
       "Whether you are balancing intermodal handoffs or recovering containers under tight free-time windows, our dispatch team prioritizes compliance, documentation accuracy, and predictable handoffs to over-the-road or warehouse teams.",
@@ -70,7 +70,7 @@ const SERVICES: ServicePanel[] = [
   },
   {
     id: "flatbed",
-    title: "Flatbed Shipping",
+    title: "Open Deck Transport",
     intro: [
       "Oversized, heavy, or non-enumerable freight demands open-deck capacity and disciplined securement. We source flatbed, step-deck, lowboy, and multi-axle solutions for steel, machinery, building products, and industrial modules.",
       "From route surveys and permit coordination to on-site load supervision, we align equipment, escorts, and delivery appointments so your cargo arrives intact and on schedule.",

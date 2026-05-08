@@ -6,7 +6,6 @@ import {
   Menu,
   Phone,
   Mail,
-  Search,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -248,13 +247,6 @@ export function Header() {
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
-            <button
-              type="button"
-              className="rounded-xl p-2 text-muted transition-colors hover:bg-canvas hover:text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30"
-              aria-label="Search"
-            >
-              <Search className="size-[18px]" />
-            </button>
             <Link href="/contact" className={btnQuote}>
               Get a quote
             </Link>
@@ -269,13 +261,6 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              type="button"
-              className="rounded-xl p-2 text-muted"
-              aria-label="Search"
-            >
-              <Search className="size-5" />
-            </button>
             <button
               type="button"
               className="rounded-xl p-2 text-ink"

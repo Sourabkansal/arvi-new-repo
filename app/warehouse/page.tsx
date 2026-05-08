@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Warehouse | ARVI Logistics",
   description:
-    "Secure storage and streamlined logistics—short-term, long-term, and seasonal warehousing to keep your supply chain moving.",
+    "Smart storage and faster distribution—flexible warehousing to keep your inventory organized, protected, and moving without delays.",
 };
 
 export default function WarehousePage() {
@@ -48,11 +48,11 @@ export default function WarehousePage() {
               Warehouse
             </h1>
             <p className="mt-3 max-w-3xl text-lg font-bold leading-snug text-white sm:mt-4 sm:text-2xl lg:text-[1.65rem] lg:leading-snug">
-              Secure Storage, Streamlined Logistics
+              Smart Storage. Faster Distribution.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 sm:mt-6 sm:text-lg">
-              Short-term, long-term, or seasonal — our warehousing solutions
-              keep your supply chain moving efficiently and reliably.
+              Flexible warehousing solutions built to keep your inventory
+              organized, protected, and moving without delays.
             </p>
             <div className="mt-9 sm:mt-10">
               <Link
@@ -68,8 +68,8 @@ export default function WarehousePage() {
         <WarehouseServicesSection />
 
         <LogisticsCtaBanner
-          headline="Need warehousing that fits your network?"
-          subheading="Speak with our team about locations, handling, and integration with your transportation plan."
+          headline="Looking for flexible warehousing solutions?"
+          subheading="Connect with our team to discuss storage, distribution, and transportation support tailored to your business."
           buttonText="Call (570) 330-6181"
           backgroundImage={warehouseHeroBg}
         />

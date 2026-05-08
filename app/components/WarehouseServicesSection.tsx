@@ -10,39 +10,39 @@ const ACCENT = "text-secondary";
 const WAREHOUSE_WHY_ITEMS: readonly { title: string; description: string }[] =
   [
     {
-      title: "Short-Term & Long-Term Storage",
+      title: "Flexible Storage Options",
       description:
-        "Tailored options to meet your operational needs—from surge space to steady-state programs.",
+        "Customized short-term and long-term storage solutions designed to match changing inventory and operational demands.",
     },
     {
-      title: "Real-Time Inventory Tracking",
+      title: "Live Inventory Visibility",
       description:
-        "Accurate, up-to-date reporting for full visibility across inbound, storage, and outbound.",
+        "Stay informed with accurate inventory monitoring and real-time updates across receiving, storage, and outbound movement.",
     },
     {
-      title: "Integrated Fulfillment",
+      title: "Connected Fulfillment Operations",
       description:
-        "Seamlessly combines storage with shipping and distribution for faster order cycles.",
+        "Storage, order processing, and distribution work together seamlessly to improve delivery speed and efficiency.",
     },
     {
-      title: "Cross-Docking & Transloading",
+      title: "Fast Cross-Docking & Transfers",
       description:
-        "Efficient handling for faster throughput between modes and final-mile carriers.",
+        "Reduce delays with streamlined freight transfers between transportation modes and delivery networks.",
     },
     {
-      title: "Secure Facilities",
+      title: "Safe & Monitored Facilities",
       description:
-        "24/7 monitoring and disciplined access controls help keep inventory safe and well-managed.",
+        "Secure warehouse environments with controlled access and continuous monitoring to protect your inventory.",
     },
     {
-      title: "Scalable Solutions",
+      title: "Scalable Capacity Support",
       description:
-        "Handle seasonal surges and high-demand periods with capacity aligned to your forecast.",
+        "Easily adapt to seasonal demand spikes and business growth with flexible warehouse capacity.",
     },
     {
-      title: "End-to-End Logistics",
+      title: "Complete Logistics Coordination",
       description:
-        "Warehousing coordinated with transportation so staging, handling, and delivery stay in sync.",
+        "Warehousing integrated with transportation services to ensure smooth handling, staging, and final delivery.",
     },
   ];
 
@@ -55,33 +55,34 @@ export function WarehouseServicesSection() {
   return (
     <section
       className="bg-surface-card py-12 sm:py-16 lg:py-20"
-      aria-labelledby="warehouse-services-heading"
+      aria-labelledby="warehouse-solutions-heading"
     >
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-14">
           <div>
             <h2
-              id="warehouse-services-heading"
+              id="warehouse-solutions-heading"
               className="text-2xl font-bold leading-tight tracking-tight text-secondary sm:text-3xl lg:text-[2rem] lg:leading-[1.15]"
             >
-              Warehouse Services
+              Warehouse Solutions
             </h2>
             <p className="mt-4 text-sm font-medium leading-snug text-muted sm:text-base sm:leading-relaxed">
-              Efficient shipping starts with the right storage strategy. At ARVI
-              Logistics, we provide secure, flexible warehousing solutions
-              designed to support your supply chain end to end—whether you need
-              short-term storage, long-term distribution support, or seasonal
-              surge capacity.
+              Strong logistics begin with efficient storage and inventory
+              management. We provide secure and scalable warehouse solutions
+              tailored to modern supply chain needs—whether you require temporary
+              storage, dedicated distribution support, or overflow capacity
+              during peak seasons.
             </p>
             <p className="mt-3 text-sm font-medium leading-snug text-muted sm:mt-4 sm:text-base sm:leading-relaxed">
-              We combine a nationwide partner warehouse network with affiliated
-              facilities so shippers get the flexibility and reliability they need
-              in key markets.
+              Our connected warehouse network and logistics partnerships allow
+              businesses to position inventory strategically, improve fulfillment
+              speed, and maintain smooth operations across key transportation
+              routes.
             </p>
             <p className="mt-4 text-sm font-medium leading-snug text-muted sm:mt-5 sm:text-base sm:leading-relaxed">
-              Coordinated storage and handling help businesses stage inventory
-              closer to demand, shorten transit where it matters, and streamline
-              distribution across major corridors.
+              From receiving and storage to inventory handling and outbound
+              coordination, we help streamline every stage of the warehousing
+              process with reliability and operational efficiency.
             </p>
           </div>
 
@@ -108,7 +109,7 @@ export function WarehouseServicesSection() {
             <span
               className={`text-sm font-extrabold leading-snug sm:text-[0.95rem] ${ACCENT}`}
             >
-              Why Shippers Choose Our Warehousing Services:
+              Why Businesses Trust Our Warehousing Solutions
             </span>
             <span
               className="flex size-9 shrink-0 items-center justify-center rounded-full border border-divider bg-surface-card shadow-sm transition-transform duration-300 ease-out motion-reduce:transition-none sm:size-10"
@@ -161,11 +162,12 @@ export function WarehouseServicesSection() {
                   })}
                 </ol>
                 <p className="mt-6 text-sm font-semibold leading-snug text-ink sm:mt-7 sm:text-[15px] sm:leading-relaxed">
-                  From pallet in to pallet out, every product is handled with
-                  care and precision. By combining warehousing with our
-                  transportation services—including LTL, FTL, drayage, and
-                  intermodal—we deliver a seamless logistics strategy that keeps
-                  your business moving efficiently.
+                  From inbound receiving to outbound shipping, every shipment is
+                  managed with accuracy, care, and operational efficiency.
+                  Combined with our transportation capabilities—including
+                  truckload, partial freight, intermodal, and port logistics—we
+                  create dependable supply chain solutions that keep your
+                  business running smoothly.
                 </p>
               </div>
             </div>

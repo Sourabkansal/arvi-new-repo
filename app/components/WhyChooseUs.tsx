@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 /**
  * Rounded hexagon path for viewBox "0 0 192 220"
  * Vertices (before rounding):
@@ -26,39 +24,28 @@ const NAVY_BAND = "#2B4C7E";
 const CARDS = [
   {
     id: "transparent",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/choose-info-icon1.png",
     banner: "TRANSPARENT",
     sublabel: "QUOTES",
-    iconAlt: "Transparent quotes icon",
   },
   {
     id: "dedicated",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/choose-info-icon2.png",
     banner: "DEDICATED",
     sublabel: "SUPPORT",
-    iconAlt: "Dedicated support icon",
   },
   {
     id: "reliable",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/choose-info-icon3.png",
     banner: "RELIABLE",
     sublabel: "SERVICE",
-    iconAlt: "Reliable service icon",
   },
 ] as const;
 
 interface HexCardProps {
   id: string;
-  iconSrc: string;
   banner: string;
   sublabel: string;
-  iconAlt: string;
 }
 
-function HexCard({ id, iconSrc, banner, sublabel, iconAlt }: HexCardProps) {
+function HexCard({ id, banner, sublabel }: HexCardProps) {
   const clipId = `hex-clip-${id}`;
   return (
     <div className="relative mx-auto w-full max-w-[192px] [filter:drop-shadow(0_8px_20px_rgba(43,76,126,0.12))]">
@@ -100,18 +87,8 @@ function HexCard({ id, iconSrc, banner, sublabel, iconAlt }: HexCardProps) {
         />
       </svg>
 
-      <div className="absolute inset-0 flex flex-col items-center">
-        <div className="relative mt-9 size-[60px] shrink-0">
-          <Image
-            src={iconSrc}
-            alt={iconAlt}
-            fill
-            className="object-contain"
-            sizes="60px"
-          />
-        </div>
-
-        <div className="mt-5 flex h-[42px] w-full items-center justify-center">
+      <div className="absolute inset-0 flex flex-col items-center pt-[116px]">
+        <div className="flex h-[42px] w-full items-center justify-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-white">
             {banner}
           </p>

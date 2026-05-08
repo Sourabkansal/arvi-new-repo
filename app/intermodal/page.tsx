@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Intermodal | ARVI Logistics",
   description:
-    "Rail, truck, and port connections coordinated for efficient, mode-optimized freight. ARVI Logistics intermodal solutions.",
+    "Connected rail, port, and truck logistics—smarter freight movement through seamless coordination across transportation modes.",
 };
 
 export default function IntermodalPage() {
@@ -48,17 +48,18 @@ export default function IntermodalPage() {
               Intermodal
             </h1>
             <p className="mt-3 max-w-3xl text-lg font-bold leading-snug text-white sm:mt-4 sm:text-2xl lg:text-[1.65rem] lg:leading-snug">
-              Seamless Rail, Truck, and Port Connections
+              Connected Rail, Port & Truck Logistics
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 sm:mt-6 sm:text-lg">
-              Your freight, optimized across modes for smarter shipping.
+              Smarter freight movement through seamless coordination across
+              transportation modes.
             </p>
             <div className="mt-9 sm:mt-10">
               <Link
                 href="/contact"
                 className="inline-flex rounded-xl bg-primary px-9 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-deep/80"
               >
-                Explore intermodal
+                Explore intermodal solutions
               </Link>
             </div>
           </div>

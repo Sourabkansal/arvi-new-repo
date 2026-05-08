@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Carriers | ARVI Logistics",
   description:
-    "Partner with ARVI Logistics: steady freight, fair rates, and support that keeps you moving from FTL and LTL to drayage and flatbed.",
+    "Reliable freight opportunities for carriers—truckload, partial freight, port logistics, and flatbed loads matched to your routes and equipment.",
 };
 
 export default function CarriersPage() {
@@ -50,20 +50,21 @@ export default function CarriersPage() {
                 className="mt-3 text-[clamp(1.45rem,4.8vw,1.85rem)] font-extrabold leading-[1.12] tracking-tight text-white drop-shadow-md sm:mt-4 sm:text-4xl sm:leading-[1.1] lg:text-[2.65rem] lg:leading-[1.08]"
               >
                 <span className="block">
-                  Keep Rolling With Reliable Loads and a Team That Has Your Back
-                </span>
-                <span className="mt-2 block text-base font-bold leading-snug text-white/95 sm:mt-3 sm:text-lg lg:mt-4 lg:text-xl lg:leading-snug">
-                  From FTL to LTL, drayage to flatbed—we connect you with freight
-                  that fits your lanes and your business goals.
+                  Keep Your Trucks Moving With Reliable Freight Opportunities
                 </span>
               </h1>
+              <p className="mt-3 max-w-2xl text-base font-bold leading-snug text-white/95 sm:mt-4 sm:text-lg lg:mt-5 lg:text-xl lg:leading-snug">
+                From truckload and partial freight to port logistics and flatbed
+                hauling—we connect carriers with loads that match their routes,
+                equipment, and business needs.
+              </p>
 
               <div className="mt-8 sm:mt-9">
                 <Link
                   href="/contact"
                   className="inline-flex rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-deep/80"
                 >
-                  Haul with us
+                  Drive with us
                 </Link>
               </div>
             </div>
@@ -73,7 +74,7 @@ export default function CarriersPage() {
         <CarriersWhyChooseSection />
 
         <LogisticsCtaBanner
-          headline="Join our carrier network—let’s find the right freight for your fleet."
+          headline="Join our carrier network—let's find the right freight for your fleet."
           subheading={null}
           buttonText="Get started"
           backgroundImage={carriersHeroBg}

@@ -1,12 +1,8 @@
-import Image from "next/image";
-
 const NAVY = "#2B4C7E";
 
 interface IndustryCard {
   title: string;
   description: string;
-  iconSrc: string;
-  iconAlt: string;
 }
 
 const INDUSTRIES: IndustryCard[] = [
@@ -14,51 +10,27 @@ const INDUSTRIES: IndustryCard[] = [
     title: "Automotive",
     description:
       "Transport of vehicle parts, tires, and complete units with utmost care and speed.",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/expert-icon2.png",
-    iconAlt: "Automotive freight",
   },
   {
     title: "Paper & Packaging",
     description:
       "Reliable service shipping large rolls, corrugated boxes, and industrial packaging supplies.",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/expert-icon4.png",
-    iconAlt: "Paper and packaging shipping",
   },
   {
     title: "Manufacturing",
     description:
       "End-to-end freight for raw materials, machinery, tools, and finished products.",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/expert-icon5.png",
-    iconAlt: "Manufacturing freight",
   },
   {
     title: "Recycling & Waste Management",
     description:
       "Streamlined transport for scrap metal, paper, plastics, and recyclables.",
-    iconSrc:
-      "https://www.sandsbrokerageinc.com/wp-content/uploads/2025/12/expert-icon8.png",
-    iconAlt: "Recycling and waste management transport",
   },
 ];
 
-function ExpertiseCard({ title, description, iconSrc, iconAlt }: IndustryCard) {
+function ExpertiseCard({ title, description }: IndustryCard) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-xl border border-divider bg-surface-card shadow-card">
-      <div className="flex min-h-[118px] flex-[1.15] items-center justify-center border-b border-divider px-4 py-6 sm:min-h-[128px]">
-        <div className="relative size-16 shrink-0 sm:size-[72px]">
-          <Image
-            src={iconSrc}
-            alt={iconAlt}
-            fill
-            className="object-contain"
-            sizes="72px"
-          />
-        </div>
-      </div>
-
       <div
         className="border-b border-secondary/20 px-3 py-3 sm:px-4 sm:py-3.5"
         style={{ backgroundColor: NAVY }}

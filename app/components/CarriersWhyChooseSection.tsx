@@ -1,40 +1,36 @@
 import carrierSideImage from "@/Images/carrier p image.jpg";
-import {
-  CheckCircle2,
-  CircleDollarSign,
-  Headset,
-  MapPinned,
-  TrendingUp,
-} from "lucide-react";
+import { Handshake, MapPinned, Truck } from "lucide-react";
 import Image from "next/image";
 
 const CARD_BG = "#FFF7ED";
 const CARD_BORDER = "#FED7AA";
 const ICON_COLOR = "#F97316";
 
+type CardIconVariant = "lanes" | "freight" | "partnership";
+
 const CARDS: {
   title: string;
   body: string;
-  icon: "lanes" | "payouts" | "support";
+  icon: CardIconVariant;
 }[] = [
   {
     icon: "lanes",
-    title: "Consistent Freight, Less Empty Miles",
-    body: "With our nationwide shipper network, you'll find steady loads that fit your lanes, equipment, and schedule—helping you maximize earnings and minimize deadhead.",
+    title: "Steady Freight Opportunities",
+    body: "Access consistent load availability through a strong nationwide shipping network designed to reduce empty miles and improve profitability.",
   },
   {
-    icon: "payouts",
-    title: "Fast Payouts You Can Count On",
-    body: "Our decade-old MC and reputation for reliability mean you get paid on time—typically within 15–20 days. No chasing payments, no added stress.",
+    icon: "freight",
+    title: "Freight That Fits Your Business",
+    body: "Whether you specialize in truckload, LTL, intermodal, drayage, or flatbed transportation, we help connect you with freight aligned to your preferred lanes and equipment.",
   },
   {
-    icon: "support",
-    title: "Dedicated Support, Every Step",
-    body: "From dispatch to delivery, our responsive carrier relations team is here to back you up. Whether you're hauling FTL, LTL, drayage, or flatbed—we keep your trucks loaded and your business moving.",
+    icon: "partnership",
+    title: "Long-Term Logistics Partnerships",
+    body: "We focus on building strong carrier relationships through dependable freight, transparent communication, and consistent opportunities that help your business grow.",
   },
 ];
 
-function CardIcon({ variant }: { variant: "lanes" | "payouts" | "support" }) {
+function CardIcon({ variant }: { variant: CardIconVariant }) {
   const common = "shrink-0";
   const stroke = 2;
 
@@ -50,44 +46,26 @@ function CardIcon({ variant }: { variant: "lanes" | "payouts" | "support" }) {
     );
   }
 
-  if (variant === "payouts") {
+  if (variant === "freight") {
     return (
-      <span className="relative inline-flex shrink-0" aria-hidden>
-        <CircleDollarSign
-          className={common}
-          style={{ color: ICON_COLOR }}
-          strokeWidth={stroke}
-          size={48}
-        />
-        <TrendingUp
-          className="absolute -right-1 -top-1 drop-shadow-sm"
-          style={{ color: ICON_COLOR }}
-          strokeWidth={stroke}
-          size={22}
-        />
-      </span>
+      <Truck
+        className={common}
+        style={{ color: ICON_COLOR }}
+        strokeWidth={stroke}
+        size={48}
+        aria-hidden
+      />
     );
   }
 
   return (
-    <span
-      className="relative inline-flex size-[52px] shrink-0 items-center justify-center"
+    <Handshake
+      className={common}
+      style={{ color: ICON_COLOR }}
+      strokeWidth={stroke}
+      size={48}
       aria-hidden
-    >
-      <Headset
-        className={common}
-        style={{ color: ICON_COLOR }}
-        strokeWidth={stroke}
-        size={44}
-      />
-      <CheckCircle2
-        className="absolute -bottom-0.5 -right-0.5 drop-shadow-sm"
-        style={{ color: ICON_COLOR }}
-        strokeWidth={2}
-        size={22}
-        fill={CARD_BG}
-      />
-    </span>
+    />
   );
 }
 
@@ -102,7 +80,7 @@ export function CarriersWhyChooseSection() {
           id="carriers-why-heading"
           className="max-w-4xl text-left text-[clamp(1.45rem,4.2vw,1.85rem)] font-bold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]"
         >
-          Why Carriers Choose ARVI Logistics
+          Why Carriers Partner With Us
         </h2>
 
         <div className="mt-10 grid items-stretch gap-10 sm:mt-12 sm:gap-12 lg:mt-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14 xl:gap-16">

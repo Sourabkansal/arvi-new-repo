@@ -2,7 +2,7 @@ import { Header } from "../components/Header";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import { OverTheRoadServicesAccordion } from "../components/OverTheRoadServicesAccordion";
 import overTheRoadBg from "@/Images/over-the-road-truck.jpg";
-import tailoredFreightImg from "@/Images/Right side loading image.png";
+import tailoredFreightImg from "@/Images/right image hero second.png";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export default function OverTheRoadPage() {
                     src={tailoredFreightImg}
                     alt="Forklift loading palletized freight into a shipping container at a loading dock"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-left"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function OverTheRoadPage() {
         <OverTheRoadServicesAccordion />
 
         <LogisticsCtaBanner
-          headline="Get secure, on-time delivery with our truckload services—start now."
+          headline="Moving your cargo safely, efficiently, and on schedule."
           subheading={null}
           buttonText="Talk to an expert"
           backgroundImage={overTheRoadBg}

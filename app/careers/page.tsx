@@ -13,7 +13,7 @@ const HR_EMAIL =
 export const metadata: Metadata = {
   title: "Careers | ARVI Logistics",
   description:
-    "Join ARVI Logistics. Explore current openings in engineering, technology, and logistics.",
+    "Join ARVI Logistics. Explore sales opportunities in Hazle Township, PA.",
 };
 
 export default function CareersPage() {
@@ -66,52 +66,24 @@ export default function CareersPage() {
               Current Openings
             </h2>
 
-            <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 md:gap-8">
+            <div className="mx-auto mt-10 max-w-2xl sm:mt-12">
               <article
                 className="rounded-xl border bg-surface-card p-6 shadow-card sm:p-8"
                 style={{ borderColor: CARD_BORDER }}
               >
                 <h3 className="text-lg font-bold text-ink sm:text-xl">
-                  Engineering Professional
+                  Sales Professional
                 </h3>
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-ink sm:text-[15px] sm:leading-[1.65]">
                   <p>
-                    <span className="font-bold">Logistics Engineer (Hazle Township, PA):</span>{" "}
-                    Develop and deploy optimization models to drive strategic and
-                    tactical decisions across supply chain and logistics functions
-                    for transportation brokerage services using various software
-                    tools and platforms.
-                  </p>
-                  <p>
-                    <span className="font-bold">Mailing address:</span> ARVI
-                    Logistics, 150 Dessen Drive, Suite B, Hazle Township, PA
-                    18201.
-                  </p>
-                  <p>
-                    <span className="font-bold">Apply:</span>{" "}
-                    <a
-                      href={HR_EMAIL}
-                      className={`font-semibold underline decoration-2 underline-offset-2 transition hover:text-primary-hover ${LINK_ACCENT}`}
-                    >
-                      Inquiry@arvilogisticsinc.com
-                    </a>
-                  </p>
-                </div>
-              </article>
-
-              <article
-                className="rounded-xl border bg-surface-card p-6 shadow-card sm:p-8"
-                style={{ borderColor: CARD_BORDER }}
-              >
-                <h3 className="text-lg font-bold text-ink sm:text-xl">
-                  IT Professional
-                </h3>
-                <div className="mt-5 space-y-4 text-sm leading-relaxed text-ink sm:text-[15px] sm:leading-[1.65]">
-                  <p>
-                    <span className="font-bold">Computer Programmer:</span> Write
-                    computer programs to store, locate, and retrieve specific
-                    documents, data, and information using various software. Job
-                    location in Hazle Township, PA.
+                    <span className="font-bold">
+                      Logistics Sales Executive (Hazle Township, PA):
+                    </span>{" "}
+                    Develop new business opportunities, manage customer
+                    relationships, and promote transportation and logistics
+                    solutions including truckload, LTL, warehousing, and intermodal
+                    services. Coordinate with clients and internal teams to deliver
+                    reliable logistics support and drive business growth.
                   </p>
                   <p>
                     <span className="font-bold">Mailing address:</span> ARVI
