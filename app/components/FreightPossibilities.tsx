@@ -1,7 +1,7 @@
 "use client";
 
 import freightColumnImage from "@/Images/right image hero second.png";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useId, useState, type ReactNode } from "react";
 
@@ -43,10 +43,12 @@ function AccordionItem({
   buttonId,
   children,
 }: AccordionItemProps) {
+  const hasPanel = children != null;
+
   return (
     <div
       id={anchorId}
-      className={`scroll-mt-28 border-b border-divider last:border-b-0 sm:scroll-mt-32 ${
+      className={`scroll-mt-28 border-b border-divider last:border-b-0 transition-colors duration-200 sm:scroll-mt-32 ${
         isOpen ? "bg-canvas" : "bg-surface-card"
       }`}
     >
@@ -61,26 +63,33 @@ function AccordionItem({
         <span className="text-base font-bold tracking-tight text-ink sm:text-lg">
           {label}
         </span>
-        {isOpen ? (
-          <ChevronUp
-            className="size-5 shrink-0 text-primary sm:size-6"
-            aria-hidden
-          />
-        ) : (
-          <ChevronDown
-            className="size-5 shrink-0 text-primary sm:size-6"
-            aria-hidden
-          />
-        )}
+        <ChevronDown
+          className={`size-5 shrink-0 text-primary transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none sm:size-6 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+          aria-hidden
+        />
       </button>
-      {isOpen && children ? (
+      {hasPanel ? (
         <div
-          id={panelId}
-          role="region"
-          aria-labelledby={buttonId}
-          className="px-4 pb-6 pt-0 sm:px-5 sm:pb-8"
+          className={`grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none motion-reduce:duration-0 ${
+            isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
         >
-          {children}
+          <div
+            className="min-h-0 overflow-hidden"
+            {...(!isOpen ? { inert: true } : {})}
+          >
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              aria-hidden={!isOpen}
+              className="px-4 pb-6 pt-0 sm:px-5 sm:pb-8"
+            >
+              {children}
+            </div>
+          </div>
         </div>
       ) : null}
     </div>
@@ -121,20 +130,20 @@ export function FreightPossibilities() {
   return (
     <section
       id="shippers"
-      className="bg-surface-card py-16 sm:py-24 lg:py-28"
+      className="bg-surface-card py-12 sm:py-16 lg:py-24 xl:py-28"
       aria-labelledby="freight-possibilities-heading"
     >
-      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-12 lg:items-stretch lg:gap-12 xl:gap-16">
-          <div className="flex flex-col lg:col-span-6">
+      <div className="mx-auto w-full max-w-[1280px] min-w-0 px-4 sm:px-6 lg:px-8">
+        <div className="grid min-w-0 grid-cols-1 items-start gap-8 sm:gap-10 lg:grid-cols-12 lg:items-stretch lg:gap-12 xl:gap-16">
+          <div className="flex min-w-0 flex-col lg:col-span-6">
             <h2
               id="freight-possibilities-heading"
-              className="max-w-xl text-[clamp(1.35rem,4.5vw,1.75rem)] font-bold leading-[1.15] tracking-tight text-ink sm:text-4xl lg:text-[2.25rem] lg:leading-[1.2]"
+              className="w-full max-w-xl text-balance text-[clamp(1.25rem,5vw,1.75rem)] font-bold leading-[1.15] tracking-tight text-ink sm:text-4xl lg:text-[2.25rem] lg:leading-[1.2]"
             >
               Connecting Your Freight to the Right Capacity—Every Time.
             </h2>
 
-            <div className="mt-10 overflow-hidden rounded-none border border-divider bg-surface-card shadow-card sm:rounded-xl">
+            <div className="mt-8 w-full min-w-0 overflow-hidden rounded-none border border-divider bg-surface-card shadow-card sm:mt-10 sm:rounded-xl">
               <AccordionItem
                 label="Over-The-Road"
                 anchorId="over-the-road"
@@ -148,7 +157,7 @@ export function FreightPossibilities() {
                 <div
                   role="tablist"
                   aria-label="Over-the-road services"
-                  className="flex flex-nowrap gap-2 overflow-x-auto pb-2 pt-0.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:overflow-visible sm:pb-0 sm:pt-0 [&::-webkit-scrollbar]:hidden"
+                  className="grid grid-cols-1 gap-2 pb-2 pt-0.5 min-[380px]:grid-cols-2 sm:flex sm:flex-wrap sm:gap-2 sm:pb-0 sm:pt-0"
                 >
                   {subTabs.map((tab) => {
                     const selected = activeSubTab === tab.id;
@@ -161,7 +170,7 @@ export function FreightPossibilities() {
                         id={`${baseId}-tab-${tab.id}`}
                         aria-controls={`${baseId}-tabpanel-otr`}
                         onClick={() => setActiveSubTab(tab.id)}
-                        className={`relative rounded-xl px-4 py-2.5 text-xs font-semibold tracking-wide transition-colors sm:px-5 sm:text-sm ${
+                        className={`relative min-h-[44px] w-full touch-manipulation rounded-xl px-3 py-2.5 text-left text-xs font-semibold leading-snug tracking-wide transition-colors min-[380px]:min-h-0 sm:w-auto sm:px-5 sm:text-sm ${
                           selected
                             ? "bg-primary text-white shadow-md shadow-primary/25"
                             : "border border-divider bg-surface-card text-ink hover:border-secondary/30"
@@ -182,7 +191,7 @@ export function FreightPossibilities() {
                   id={`${baseId}-tabpanel-otr`}
                   role="tabpanel"
                   aria-labelledby={`${baseId}-tab-${activeSubTab}`}
-                  className="mt-6 max-w-2xl whitespace-pre-line text-sm leading-relaxed text-ink sm:text-base"
+                  className="mt-5 max-w-full min-w-0 whitespace-pre-line text-sm leading-relaxed text-ink sm:mt-6 sm:text-base"
                 >
                   {OTR_COPY[activeSubTab]}
                 </div>
@@ -198,7 +207,7 @@ export function FreightPossibilities() {
                 panelId={`${baseId}-wh-panel`}
                 buttonId={`${baseId}-wh-btn`}
               >
-                <p className="max-w-2xl text-sm leading-relaxed text-ink sm:text-base">
+                <p className="min-w-0 max-w-2xl break-words text-sm leading-relaxed text-ink sm:text-base">
                   {WAREHOUSE_BODY}
                 </p>
               </AccordionItem>
@@ -213,20 +222,20 @@ export function FreightPossibilities() {
                 panelId={`${baseId}-im-panel`}
                 buttonId={`${baseId}-im-btn`}
               >
-                <p className="max-w-2xl text-sm leading-relaxed text-ink sm:text-base">
+                <p className="min-w-0 max-w-2xl break-words text-sm leading-relaxed text-ink sm:text-base">
                   {INTERMODAL_BODY}
                 </p>
               </AccordionItem>
             </div>
           </div>
 
-          <div className="flex flex-col lg:col-span-6 lg:h-full lg:min-h-0">
-            <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl bg-divider shadow-card ring-1 ring-divider lg:aspect-auto lg:min-h-0 lg:flex-1">
+          <div className="flex min-h-0 w-full min-w-0 flex-col lg:col-span-6 lg:h-full lg:min-h-0">
+            <div className="relative aspect-[5/4] w-full min-w-0 shrink-0 overflow-hidden rounded-xl bg-divider shadow-card ring-1 ring-divider sm:aspect-video sm:rounded-2xl lg:aspect-auto lg:min-h-[min(340px,50vh)] lg:flex-1">
               <Image
                 src={freightColumnImage}
                 alt="Forklift loading palletized freight into a shipping container"
                 fill
-                className="object-cover object-left"
+                className="object-cover object-left sm:object-center lg:object-left"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

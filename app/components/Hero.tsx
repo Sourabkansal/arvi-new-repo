@@ -18,12 +18,12 @@ function HeroCtaCard() {
       <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
         <div className="min-w-0">
           <p className="text-center text-sm font-medium leading-relaxed text-muted sm:text-base lg:text-left lg:text-lg">
-            Your freight, our expertise—delivering efficiency for shippers and
-            carriers alike.
+            Your freight, delivered with speed, reliability, and expert logistics
+            support.
           </p>
           <p className="mt-2 text-center text-xs text-muted sm:text-sm lg:text-left">
-            Dry van, refrigerated, flatbed, and more — tell us what you need to
-            move.
+            Truckload, refrigerated, flatbed, and specialized freight solutions
+            tailored to your shipping needs.
           </p>
         </div>
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center lg:w-auto lg:shrink-0 lg:justify-end">
@@ -31,13 +31,13 @@ function HeroCtaCard() {
             href="/contact"
             className="w-full rounded-xl bg-primary px-6 py-3.5 text-center text-sm font-semibold tracking-wide text-white shadow-md shadow-primary/30 transition hover:bg-primary-hover hover:shadow-lg sm:w-auto sm:min-w-[10rem] sm:px-8"
           >
-            Get a quote
+            Request a Quote
           </Link>
           <Link
             href="#shippers"
             className="w-full rounded-xl border-2 border-secondary bg-surface-card px-6 py-3.5 text-center text-sm font-semibold tracking-wide text-secondary shadow-sm transition hover:bg-secondary/5 sm:w-auto sm:min-w-[10rem] sm:px-8"
           >
-            Haul with us
+            Drive With Us
           </Link>
         </div>
       </div>
