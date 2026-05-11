@@ -2,16 +2,13 @@ import { Header } from "../components/Header";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import { OverTheRoadServicesAccordion } from "../components/OverTheRoadServicesAccordion";
 import overTheRoadBg from "@/Images/over-the-road-truck.jpg";
-import tailoredFreightImg from "@/Images/right image hero second.png";
-import type { Metadata } from "next";
+import tailoredFreightImg from "@/Images/new gen right side blue truck.png";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Over the Road | ARVI Logistics",
-  description:
-    "End-to-end over-the-road shipping solutions tailored to your business. ARVI Logistics.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/over-the-road"]);
 
 export default function OverTheRoadPage() {
   return (
@@ -71,9 +68,9 @@ export default function OverTheRoadPage() {
           className="bg-surface-card py-16 sm:py-20 lg:py-24"
           aria-labelledby="otr-tailored-heading"
         >
-          <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-              <div>
+          <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+              <div className="lg:col-span-5">
                 <h2
                   id="otr-tailored-heading"
                   className="text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.35rem] lg:leading-[1.15]"
@@ -87,14 +84,14 @@ export default function OverTheRoadPage() {
                   speed, efficiency, and complete visibility at every step.
                 </p>
               </div>
-              <div className="min-w-0 lg:min-h-0">
-                <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl shadow-card ring-1 ring-divider lg:mx-0">
+              <div className="min-w-0 lg:col-span-7 lg:min-h-0">
+                <div className="relative mx-auto aspect-video min-h-[280px] w-full overflow-hidden rounded-2xl bg-secondary-deep shadow-card ring-1 ring-divider sm:min-h-[320px] lg:mx-0 lg:min-h-[380px]">
                   <Image
                     src={tailoredFreightImg}
                     alt="Forklift loading palletized freight into a shipping container at a loading dock"
                     fill
                     className="object-cover object-left"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 58vw"
                   />
                 </div>
               </div>

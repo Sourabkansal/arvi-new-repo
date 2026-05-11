@@ -2,15 +2,12 @@ import { Header } from "../components/Header";
 import { IntermodalShippingSection } from "../components/IntermodalShippingSection";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import intermodalHeroBg from "@/Images/intermodal image hero.png";
-import type { Metadata } from "next";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Intermodal | ARVI Logistics",
-  description:
-    "Connected rail, port, and truck logistics—smarter freight movement through seamless coordination across transportation modes.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/intermodal"]);
 
 export default function IntermodalPage() {
   return (

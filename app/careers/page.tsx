@@ -1,7 +1,8 @@
 import { CareersWhyWorkSection } from "../components/CareersWhyWorkSection";
 import { Header } from "../components/Header";
 import careersHeroBg from "@/Images/Carrers Page.png";
-import type { Metadata } from "next";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 import Image from "next/image";
 
 const CARD_BORDER = "#E5E7EB";
@@ -10,11 +11,7 @@ const LINK_ACCENT = "text-primary";
 const HR_EMAIL =
   "mailto:Inquiry@arvilogisticsinc.com?subject=Careers%20Application";
 
-export const metadata: Metadata = {
-  title: "Careers | ARVI Logistics",
-  description:
-    "Join ARVI Logistics. Explore sales opportunities in Hazle Township, PA.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/careers"]);
 
 export default function CareersPage() {
   return (

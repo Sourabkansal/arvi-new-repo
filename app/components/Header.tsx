@@ -25,13 +25,13 @@ type DropdownItem = {
 };
 
 const navItems: { label: string; href: string; hasDropdown: boolean }[] = [
-  { label: "SHIPPERS", href: "#shippers", hasDropdown: true },
+  { label: "SHIPPERS", href: "/#shippers", hasDropdown: true },
   { label: "CARRIERS", href: "/carriers", hasDropdown: false },
   /* Temporarily hidden — add back above ABOUT US when needed:
   { label: "RESOURCES", href: "#resources", hasDropdown: true },
   */
-  { label: "ABOUT US", href: "#about", hasDropdown: true },
-  { label: "TRACKING", href: "#tracking", hasDropdown: true },
+  { label: "ABOUT US", href: "/#about", hasDropdown: true },
+  { label: "TRACKING", href: "/#tracking", hasDropdown: true },
 ];
 
 const shippersDropdown: DropdownItem[] = [
@@ -43,7 +43,7 @@ const shippersDropdown: DropdownItem[] = [
 const aboutDropdown: DropdownItem[] = [{ label: "CAREERS", href: "/careers" }];
 
 /** XpressTrax customer portal (shared query string on all entry points). */
-const XPRESSTRAX_QS = "id=Db8smWS1tpU%3d&ltr=6zcOsHDiKmw%3d";
+const XPRESSTRAX_QS = "id=Db8smWS1tpU%3d&ltr=gmAvyXXkjAI%3d";
 
 const XPRESSTRAX_REGISTRATION = `https://customers.xpresstrax.com/PGCommon/Registration.aspx?${XPRESSTRAX_QS}`;
 const XPRESSTRAX_AVAILABLE_LOADS = `https://customers.xpresstrax.com/Availloads.aspx?${XPRESSTRAX_QS}`;
@@ -62,7 +62,7 @@ function getDropdownItems(
 ): DropdownItem[] | null {
   if (item.label === "SHIPPERS") return shippersDropdown;
   if (item.label === "ABOUT US") return aboutDropdown;
-  if (item.href === "#tracking") return trackingDropdown;
+  if (item.label === "TRACKING") return trackingDropdown;
   return null;
 }
 
@@ -167,7 +167,7 @@ export function Header() {
             {navItems.map((item) => {
               const dropdownItems = getDropdownItems(item);
               const dropdownWidthClass =
-                item.href === "#tracking"
+                item.label === "TRACKING"
                   ? "w-max min-w-0"
                   : item.label === "ABOUT US"
                     ? "w-24"
@@ -195,7 +195,7 @@ export function Header() {
                           <NavDropdownLink
                             href={subItem.href}
                             className={`flex items-center justify-between px-3 py-2.5 text-[10px] font-semibold tracking-wide text-ink transition-all duration-150 hover:bg-primary/[0.06] hover:pl-4 hover:text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/25 ${
-                              item.href === "#tracking"
+                              item.label === "TRACKING"
                                 ? "whitespace-nowrap"
                                 : ""
                             }`}

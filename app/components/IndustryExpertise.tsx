@@ -52,13 +52,13 @@ function ExpertiseCard({ title, description }: IndustryCard) {
 export function IndustryExpertise() {
   return (
     <section
-      id="industry-expertise"
+      id="about"
       className="bg-canvas py-16 sm:py-20 lg:py-24"
-      aria-labelledby="industry-expertise-heading"
+      aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <h2
-          id="industry-expertise-heading"
+          id="about-heading"
           className="text-center text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:text-[1.75rem] lg:leading-snug"
         >
           Where Industry Expertise Meets Business Performance

@@ -1,12 +1,9 @@
 import { ContactFormSection } from "../components/ContactFormSection";
 import { Header } from "../components/Header";
-import type { Metadata } from "next";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 
-export const metadata: Metadata = {
-  title: "Contact Us | ARVI Logistics",
-  description:
-    "Ask a question or request a quote. ARVI Logistics — freight brokerage and logistics.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/contact"]);
 
 export default function ContactPage() {
   return (

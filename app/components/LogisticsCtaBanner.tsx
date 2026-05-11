@@ -8,6 +8,8 @@ const DEFAULT_SUBHEADING = "Tailored Freight Solutions for Every Business.";
 const DEFAULT_BUTTON = "Talk to a logistics expert";
 
 export interface LogisticsCtaBannerProps {
+  /** Optional stable id for in-page anchor links (e.g. tracking resources). */
+  sectionId?: string;
   /** Main headline (white, bold). */
   headline?: string;
   /**
@@ -22,6 +24,7 @@ export interface LogisticsCtaBannerProps {
 }
 
 export function LogisticsCtaBanner({
+  sectionId,
   headline = DEFAULT_HEADLINE,
   subheading = DEFAULT_SUBHEADING,
   buttonText = DEFAULT_BUTTON,
@@ -30,17 +33,17 @@ export function LogisticsCtaBanner({
   const showSubheading = subheading !== null && subheading !== "";
 
   return (
-    <section className="bg-canvas py-10 sm:py-12 lg:py-14">
+    <section id={sectionId} className="bg-canvas scroll-mt-28 py-10 sm:scroll-mt-32 sm:py-12 lg:py-14">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-divider sm:rounded-3xl">
           <div className="absolute inset-0">
             <Image
               src={backgroundImage}
-              alt=""
+              alt="Industrial warehouse corridor with forklift and freight loading docks"
               fill
               className="object-cover object-center"
               sizes="(max-width: 1280px) 100vw, 1280px"
-              aria-hidden
+              loading="lazy"
             />
             <div
               className="absolute inset-0 bg-secondary-deep/75"

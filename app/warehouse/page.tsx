@@ -2,15 +2,12 @@ import { Header } from "../components/Header";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import { WarehouseServicesSection } from "../components/WarehouseServicesSection";
 import warehouseHeroBg from "@/Images/warehouse Hero image.png";
-import type { Metadata } from "next";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Warehouse | ARVI Logistics",
-  description:
-    "Smart storage and faster distribution—flexible warehousing to keep your inventory organized, protected, and moving without delays.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/warehouse"]);
 
 export default function WarehousePage() {
   return (

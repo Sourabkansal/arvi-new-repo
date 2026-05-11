@@ -2,15 +2,12 @@ import { CarriersWhyChooseSection } from "../components/CarriersWhyChooseSection
 import { Header } from "../components/Header";
 import { LogisticsCtaBanner } from "../components/LogisticsCtaBanner";
 import carriersHeroBg from "@/Images/Carriers hero image.jpg";
-import type { Metadata } from "next";
+import { buildRouteMetadata } from "@/lib/seo/metadata";
+import { ROUTE_META } from "@/lib/seo/routes-metadata";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Carriers | ARVI Logistics",
-  description:
-    "Reliable freight opportunities for carriers—truckload, partial freight, port logistics, and flatbed loads matched to your routes and equipment.",
-};
+export const metadata = buildRouteMetadata(ROUTE_META["/carriers"]);
 
 export default function CarriersPage() {
   return (

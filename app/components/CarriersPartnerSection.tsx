@@ -1,4 +1,4 @@
-import truckImage from "@/Images/right image truck.png";
+import truckImage from "@/Images/White truck american.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,9 +67,9 @@ export function CarriersPartnerSection() {
             <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl shadow-card-hover ring-1 ring-white/15 sm:aspect-[4/3] lg:min-h-[340px] lg:aspect-[16/11]">
               <Image
                 src={truckImage}
-                alt="ARVI Logistics semi-truck with city skyline"
+                alt="Fleet of white semi-trailer trucks parked in a row with mountains in the distance"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-left"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority={false}
               />

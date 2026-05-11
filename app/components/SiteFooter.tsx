@@ -137,7 +137,7 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-2.5 text-sm text-muted">
               {[
                 { label: "Home", href: "/" },
-                { label: "About Us", href: "#about" },
+                { label: "About Us", href: "/#about" },
                 { label: "Careers", href: "/careers" },
                 { label: "Contact Us", href: "/contact" },
               ].map((item) => (
@@ -164,8 +164,8 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-2.5 text-sm text-muted">
               {[
                 { label: "Over-The-Road", href: "/over-the-road" },
-                { label: "Warehouse", href: "#warehouse" },
-                { label: "Intermodal", href: "#intermodal" },
+                { label: "Warehouse", href: "/warehouse" },
+                { label: "Intermodal", href: "/intermodal" },
                 { label: "Carrier Network", href: "/carriers" },
               ].map((item) => (
                 <li key={item.label}>
