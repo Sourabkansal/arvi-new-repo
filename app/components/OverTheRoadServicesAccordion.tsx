@@ -1,6 +1,6 @@
 "use client";
 
-import warehouseImg from "@/Images/Warehouse worker loading truck at sunset.png";
+import warehouseImg from "@/Images/Right side loading image.png";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { useId, useState } from "react";
@@ -207,7 +207,7 @@ export function OverTheRoadServicesAccordion() {
                         <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-card ring-1 ring-divider sm:max-w-[380px] lg:mx-0 lg:max-w-none">
                           <Image
                             src={warehouseImg}
-                            alt="Warehouse worker loading freight onto a truck at sunset"
+                            alt="Freight loading and logistics operations at a distribution facility"
                             fill
                             className="object-cover object-center"
                             sizes="(max-width: 1024px) 380px, 420px"
